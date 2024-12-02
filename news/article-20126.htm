@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://freevmess.github.io/news/article-19669.htm" />
+        <link rel="canonical" href="https://freevmess.github.io/news/article-20126.htm" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>将maven项目打成执行jar包</title>
-        <meta name="description" content="在pom中添加   &lt;build&gt;         &lt;plugins&gt;             &lt;plugin&gt;                 &lt;artif" />
+    <title>CSS3怎么为文字添加背景?</title>
+        <meta name="description" content="这两天在写官网,标题标语之类的文字都是带有流光溢、炫酷图案的文字 大致就像苹果官网上的那些slogan吧,可不是简单的渐变色之类哦 但是由于使用了CSS3属性,所以要考虑到兼容性,仅Webkit内核的" />
         <link rel="icon" href="__ADDON__/img/freevmess/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
     <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
@@ -60,7 +60,7 @@
             <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
                 <div class="row">
                     <div class="col-md-9 mx-auto">
-                        <h1 class="display-1 mb-3">将maven项目打成执行jar包</h1>
+                        <h1 class="display-1 mb-3">CSS3怎么为文字添加背景?</h1>
                         <p class="lead px-xxl-10">
                             <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
                         </p>
@@ -76,10 +76,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="htmledit_views"> <p>在pom中添加</p> <pre class="has"><code class="language-java">  &lt;build&gt;         &lt;plugins&gt;             &lt;plugin&gt;                 &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;                 &lt;configuration&gt;                     &lt;appendAssemblyId&gt;false&lt;/appendAssemblyId&gt;                     &lt;descriptorRefs&gt;                         &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;                     &lt;/descriptorRefs&gt;                     &lt;archive&gt;                         &lt;manifest&gt;                             &lt;!-- 此处指定main方法入口的class --&gt;                             &lt;mainClass&gt;入口类全类名&lt;/mainClass&gt;                         &lt;/manifest&gt;                     &lt;/archive&gt;                 &lt;/configuration&gt;                 &lt;executions&gt;                     &lt;execution&gt;                         &lt;id&gt;make-assembly&lt;/id&gt;                         &lt;phase&gt;package&lt;/phase&gt;                         &lt;goals&gt;                             &lt;goal&gt;assembly&lt;/goal&gt;                         &lt;/goals&gt;                     &lt;/execution&gt;                 &lt;/executions&gt;             &lt;/plugin&gt;         &lt;/plugins&gt;     &lt;/build&gt;</code></pre> <p><img decoding="async" alt="在这里插入图片描述" class="has" src="http://img.555519.xyz/uploads3/20220603/92f092672d358bae332f79864e561c82.jpg"><br /> 双击package 打包即可<br /> 结果<br /><img decoding="async" alt="在这里插入图片描述" class="has" src="http://img.555519.xyz/uploads3/20220603/55ee6f9bacf7e61be35709fdcc2ced3e.jpg"></p> </div> 			                <div class="clearfix"></div>
+                                          				  				  				<div id="content_views" class="htmledit_views"> <p>这两天在写官网,标题标语之类的文字都是带有流光溢、炫酷图案的文字</p> <p>大致就像苹果官网上的那些slogan吧,可不是简单的渐变色之类哦</p> <p>但是由于使用了CSS3属性,所以要考虑到兼容性,仅Webkit内核的浏览器适用</p> <p>效果如下:</p> <p><img decoding="async" alt="" class="has" height="88" src="http://img.555519.xyz/uploads3/20220605/9f2e9bd392f4fe5ca077d34b5f2fa1f7.jpg"></p> <p>设计师随后给我发来了一个图案background.jpg:</p> <p><img decoding="async" alt="" class="has" height="122" src="http://img.555519.xyz/uploads3/20220605/50b379b1054000ca9f01ff7c90ac23d0.jpg"></p> <p>就拿这张图做背景,即可实现需求,</p> <p>具体操作如下:</p> <pre class="has"><code> &lt;!DOCTYPE html&gt; &lt;html&gt;   &lt;head&gt;     &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;style type="text/css"&gt;     * {         font-family: fantasy;         font-size: 1.8em;     }       div {         height: auto; //根据需求而定         width: auto;//根据需求而定         background: url(background.jpg) no-repeat;  // 背景图         background-origin: border-box;         -webkit-background-clip: text;         -webkit-text-fill-color: transparent;               } &lt;/style&gt;   &lt;body&gt;     &lt;div&gt;影像随用随取&lt;/div&gt; &lt;/body&gt;   &lt;/html&gt;</code></pre> <p>这个解决方案是参考一位网友的,他在文章中提到:</p> <p>"由于是css3的,所以有些浏览器不支持,而且text-till-color:transparent是Webkit内核的私有属性,所以其他非webkit浏览器可能不行."</p> <p>抽空查了查css3,</p> <p>background-clip指背景剪裁的位置.</p> <p>比如:通常为盒子添加背景色后,整个盒子包括边框在内,都后有背景色;</p> <p>可一旦添加上background-clip属性,</p> <p>如background-clip: padding-box; 那么背景只在padding到content的区域显示,边框不显示背景图;</p> <p>如&nbsp;background-clip: content-box;那么背景只显示在content区域,其以外均不显示背景图;</p> <p>上面代码background-clip: text;表示只为文本添加背景图</p> <p>background-origin指背景图显示的位置,</p> <table> <tbody> <tr> <td>padding-box</td> <td>背景图像填充框的相对位置</td> </tr> <tr> <td>border-box</td> <td>背景图像边界框的相对位置</td> </tr> <tr> <td>content-box</td> <td>背景图像的相对位置的内容框</td> </tr> </tbody> </table> <p>这个属性私以为也可以不写~~~</p> <p>text-fill-color,文本填充颜色,通常设为transparent,透明色;&nbsp;这个属性对于我写的那个效果,私以为也可以不写~~~</p> <p>最常见的渐变色文字效果,就脱离不了text-fill-color的功能</p> <pre class="has"><code>background-image:-webkit-linear-gradient(#eee,#000); -webkit-background-clip:text; -webkit-text-fill-color:transparent;</code></pre> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-19211.htm">让猫挠了轻微出血有事吗猫打了狂犬疫苗会怎么样（让猫挠了出血有事吗以前打过疫苗）</a></p>
-                                        <p>下一个：<a href="/news/article-19670.htm">小猫咪打三针疫苗的时间间隔（猫咪打三针疫苗需要多久）</a></p>
+                                        <p>上一个：<a href="/news/article-19670.htm">小猫咪打三针疫苗的时间间隔（猫咪打三针疫苗需要多久）</a></p>
+                                        <p>下一个：<a href="/news/article-20127.htm">动物接种疫苗多少次有效呢（动物接种疫苗多少次有效呢）</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -89,16 +89,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-11-14-free-subscribe-node.htm" title="11月14日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月14日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-17-node-share-links.htm" title="11月17日→21M/S|2024年最新免费节点Free Vmess订阅链接地址">11月17日→21M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-1-node-share.htm" title="11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-5-free-node-subscribe.htm" title="11月5日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月5日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-16-free-high-speed-nodes.htm" title="11月16日→19.3M/S|2024年最新免费节点Free Vmess订阅链接地址">11月16日→19.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-2-node-share-links.htm" title="11月2日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址">11月2日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-19-node-share.htm" title="10月19日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址">10月19日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-20126.htm" title="CSS3怎么为文字添加背景?">CSS3怎么为文字添加背景?</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-14-free-node-subscribe-links.htm" title="9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址">9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-29-free-subscribe-node.htm" title="11月29日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月29日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-28-free-node-subscribe-links.htm" title="11月28日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月28日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-23-free-node-subscribe-links.htm" title="11月23日→20.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月23日→20.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-11-free-node-subscribe-links.htm" title="9月11日→19.3M/S|2024年最新免费节点Free Vmess订阅链接地址">9月11日→19.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-10-25-free-subscribe-node.htm" title="10月25日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址">10月25日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-15-node-share-links.htm" title="10月15日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址">10月15日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-16-free-high-speed-nodes.htm" title="11月16日→19.3M/S|2024年最新免费节点Free Vmess订阅链接地址">11月16日→19.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-high-speed-nodes.htm" title="11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-17-node-share-links.htm" title="9月17日→19.7M/S|2024年最新免费节点Free Vmess订阅链接地址">9月17日→19.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-24-node-share-links.htm" title="9月24日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址">9月24日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                     </ul>
     </div>
 </div>

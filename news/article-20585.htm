@@ -2,12 +2,11 @@
 <html lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://freevmess.github.io" />
+        <link rel="canonical" href="https://freevmess.github.io/news/article-20585.htm" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2024-09归档 - Free Vmess机场节点分享官网</title>
-        <meta name="keywords" content="2024-09归档" />
-        <meta name="description" content="2024-09归档" />
+    <title>解决：“/****/kafka_2.13-3.0.0/bin/kafka-run-class.sh: line 342: exec: java: not found ”问题</title>
+        <meta name="description" content="启动zookeeper失败，查看状态日志，如下图：   kafka运行依赖java环境，而本机已安装java环境  查看java环境变量  &nbsp;查看kafka环境变量  回到问题本身，我们看一" />
         <link rel="icon" href="__ADDON__/img/freevmess/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
     <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
@@ -26,7 +25,7 @@
      crossorigin="anonymous"></script>
 </head>
 
-<body data-page="category">
+<body data-page="detail">
     <div class="content-wrapper">
                 <header class="wrapper bg-soft-primary">
             <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
@@ -60,10 +59,10 @@
         <section class="wrapper bg-soft-primary">
             <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
                 <div class="row">
-                    <div class="col-md-9 col-lg-7 col-xl-5 mx-auto">
-                        <h1 class="display-1 mb-3">2024-09 归档</h1>
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">解决：“/****/kafka_2.13-3.0.0/bin/kafka-run-class.sh: line 342: exec: java: not found ”问题</h1>
                         <p class="lead px-xxl-10">
-                          <a href="/">首页</a> / 2024-09 归档
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
                         </p>
                     </div>
                     <!-- /column -->
@@ -77,24 +76,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                        <div class="xcblog-blog-list">
-                                                        <div class="row item xcblog-blog-item" data-date="2024-09-10">
-                                <div class="col-md-3">
-                                    <a href="/free-nodes/2024-9-10-node-share-links.htm" class="xcblog-blog-url">
-                                        <img src="/uploads/20240910/a70df45d29adcd7969129e1574c17ad6.webp" alt="9月10日→19.2M/S|2024年最新免费节点Free Vmess订阅链接地址" style="width:100%;">
-                                    </a>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-9-10-node-share-links.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">9月10日→19.2M/S|2024年最新免费节点Free Vmess订阅链接地址</h3>
-                                    </a>
-                                    <p>
-                                        这一次的节点更新覆盖了欧洲、香港、美国、加拿大、韩国、日本、新加坡等地区,最高速度可达19.2 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。                                    </p>
-                                </div>
-                            </div>
-                            
-                            <ul class="pagination"><li><a href="/date/2024-09/page-2.htm">&laquo;</a></li> <li><a href="/date/2024-09/">1</a></li><li><a href="/date/2024-09/page-2.htm">2</a></li><li class="active"><span>3</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                        </div>
-                    </div>
+                                          				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>启动zookeeper失败，查看状态日志，如下图：</p> <p><img fetchpriority="high" decoding="async" alt="" height="296" src="http://img.555519.xyz/uploads3/20220821/7c100c5db0595567d6b14f12e15e01b3.jpg"></p> </h1> <p>kafka运行依赖java环境，而本机已安装java环境</p> <p><img decoding="async" alt="" height="116" src="http://img.555519.xyz/uploads3/20220821/3d796ee06348818815842f829706e708.jpg"></p> <p>查看java环境变量</p> <p><img decoding="async" alt="" height="83" src="http://img.555519.xyz/uploads3/20220821/8702470f7597fab8bca2d62e438fa91b.jpg"></p> <p>&nbsp;查看kafka环境变量</p> <p><img loading="lazy" decoding="async" alt="" height="75" src="http://img.555519.xyz/uploads3/20220821/ce48035ca7551975e73430713f83b9db.jpg"></p> <p>回到问题本身，我们看一下kafka-run-class.sh脚本的342行内容：</p> <p><img loading="lazy" decoding="async" alt="" height="210" src="http://img.555519.xyz/uploads3/20220821/e5c4010acf37e3bcab2cdb75b88f3e18.jpg"></p> <p>这里网上搜了很久，获悉kafka默认引用的java路径：/user/bin/java，这个与我们实际配置的java的环境变量$JAVA_HOME/bin路径不一致。</p> <p>这里，借鉴一下前辈的办法：</p> <ol> <li>修改java环境变量配置(修改java环境变量可能会引入新的环境配置问题，不推荐)</li> <li>设置软连接指向/user/bin/java这个路径(推荐)</li> </ol> <pre><code class="language-bash">[root@node03 ~]# echo $JAVA_HOME /root/jdk/jdk1.8.0_221 [root@node03 ~]#  [root@node03 ~]# ln -s $JAVA_HOME/bin/java user/bin/java [root@node03 ~]#</code></pre> <p>reboot -f 重启即可</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-20127.htm">动物接种疫苗多少次有效呢（动物接种疫苗多少次有效呢）</a></p>
+                                        <p>下一个：<a href="/news/article-20586.htm">一只猫多少钱最便宜（一只家猫多少钱）</a></p>
+                                    </div>
+                                    </div>
                     <div class="col-md-3">
                         <div class="panel panel-default">
     <div class="panel-heading">
@@ -102,16 +89,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-9-13-free-node-subscribe-links.htm" title="9月13日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址">9月13日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-15-free-high-speed-nodes.htm" title="11月15日→22M/S|2024年最新免费节点Free Vmess订阅链接地址">11月15日→22M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-27-free-high-speed-nodes.htm" title="10月27日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址">10月27日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-28-node-share.htm" title="9月28日→19.5M/S|2024年最新免费节点Free Vmess订阅链接地址">9月28日→19.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-19211.htm" title="让猫挠了轻微出血有事吗猫打了狂犬疫苗会怎么样（让猫挠了出血有事吗以前打过疫苗）">让猫挠了轻微出血有事吗猫打了狂犬疫苗会怎么样（让猫挠了出血有事吗以前打过疫苗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-23-node-share-links.htm" title="10月23日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">10月23日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-20-node-share-links.htm" title="11月20日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址">11月20日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-20-node-share.htm" title="10月20日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址">10月20日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-9-node-share.htm" title="10月9日→19.1M/S|2024年最新免费节点Free Vmess订阅链接地址">10月9日→19.1M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-10-node-share-links.htm" title="9月10日→19.2M/S|2024年最新免费节点Free Vmess订阅链接地址">9月10日→19.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-13-node-share-links.htm" title="11月13日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月13日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-free-node-subscribe-links.htm" title="11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-21-free-node-subscribe.htm" title="10月21日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址">10月21日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-25-node-share-links.htm" title="11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址">11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-node-share.htm" title="12月2日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月2日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-10-free-high-speed-nodes.htm" title="10月10日→22.9M/S|2024年最新免费节点Free Vmess订阅链接地址">10月10日→22.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-29-free-subscribe-node.htm" title="9月29日→19M/S|2024年最新免费节点Free Vmess订阅链接地址">9月29日→19M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-high-speed-nodes.htm" title="11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-2-node-share-links.htm" title="10月2日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址">10月2日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20126.htm" title="CSS3怎么为文字添加背景?">CSS3怎么为文字添加背景?</a></li>
                     </ul>
     </div>
 </div>

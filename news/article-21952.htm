@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-21952.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue +Vant 实现顶部搜索栏</title>
+        <meta name="description" content="&lt;template&gt;   &lt;section class="city-search"&gt;     &lt;van-icon class="search-icon" name="se" />
+        <link rel="icon" href="__ADDON__/img/freevmess/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                                                <a href="/">
+                            <span>Free Vmess</span>
+                        </a>
+                                            </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">Vue +Vant 实现顶部搜索栏</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                          				  				  				<div id="content_views" class="htmledit_views"> </h1> <pre><code>&lt;template&gt;   &lt;section class="city-search"&gt;     &lt;van-icon class="search-icon" name="search" /&gt;     &lt;input  placeholder="在此输入检索关键字" v-model="KeyWord"&gt;     &lt;van-icon class="clear-icon" name="clear" v-show="KeyWord" @click="clearSearchInput" /&gt;   &lt;/section&gt; &lt;/template&gt;  &lt;script&gt; export default {    data() {         return {             KeyWord: '',         }     },     methods: {         clearSearchInput() {             this.KeyWord = '';         }     } } &lt;/script&gt;  &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt; &lt;style&gt;     .city-search {         background-color: #F7F8FA;         display: flex;         justify-content: flex-start;         align-items: center;         height: 2.3rem;         width: 94vw;         margin: 2vw 4vw;         border-radius: 8px;     }     .search-icon {       margin-left: 5px;     }     input {       margin: 0 1.5vw;       background-color: #F7F8FA;       border: 0px;       font-size: 14px;       flex: 1     }     .clear-icon { color: #999;}    &lt;/style&gt;</code></pre> </h1> <p>首页引用搜索组件:</p> <pre><code>&lt;template&gt;   &lt;div&gt;       &lt;search&gt;&lt;/search&gt;         首页   &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; import Search from '@/components/SearchBar' export default {    name: "home",    components: {       'search': Search,     }, } &lt;/script&gt;  &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt; &lt;style&gt;  &lt;/style&gt;</code></pre> <p>效果截图:</p> <p><img fetchpriority="high" decoding="async" alt="" height="548" src="http://img.555519.xyz/uploads3/20220904/1286c073c6305021e8601f5f643b2b41.jpg"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-21510.htm">动物医院实践心得体会怎么写啊（动物医院实践心得2000）</a></p>
+                                        <p>下一个：<a href="/news/article-21953.htm">宠物寄养店怎么开行情怎么样（宠物寄养店怎么运营）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-6-free-high-speed-nodes.htm" title="11月6日→18M/S|2024年最新免费节点Free Vmess订阅链接地址">11月6日→18M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-12-free-node-subscribe.htm" title="10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址">10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-9-node-share.htm" title="10月9日→19.1M/S|2024年最新免费节点Free Vmess订阅链接地址">10月9日→19.1M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-4-free-node-subscribe-links.htm" title="11月4日→18.1M/S|2024年最新免费节点Free Vmess订阅链接地址">11月4日→18.1M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-26-free-high-speed-nodes.htm" title="10月26日→22.6M/S|2024年最新免费节点Free Vmess订阅链接地址">10月26日→22.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20127.htm" title="动物接种疫苗多少次有效呢（动物接种疫苗多少次有效呢）">动物接种疫苗多少次有效呢（动物接种疫苗多少次有效呢）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-high-speed-nodes.htm" title="11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-22-free-subscribe-node.htm" title="9月22日→20.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月22日→20.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19669.htm" title="将maven项目打成执行jar包">将maven项目打成执行jar包</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-21-free-node-subscribe.htm" title="10月21日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址">10月21日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

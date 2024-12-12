@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-24725.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>springboot之依赖版本管理</title>
+        <meta name="description" content="&nbsp; &nbsp; &nbsp; &nbsp;我们在使用springboot项目的时候，在我们的pom文件中，我们引入的依赖通常不需要制定依赖的版本,但是maven却能够给我们下载正常的jar" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                                                <a href="/">
+                            <span>Free Vmess</span>
+                        </a>
+                                            </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">springboot之依赖版本管理</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                          				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp; &nbsp; &nbsp; &nbsp;我们在使用springboot项目的时候，在我们的pom文件中，我们引入的依赖通常不需要制定依赖的版本,但是maven却能够给我们下载正常的jar包。</p> <p>&nbsp; &nbsp; &nbsp; 在普通的spring项目的中我们需要自己去定义依赖的版本，经常会遇到jar包冲突的情况，springboot自动的帮我们管理这些依赖的版本，给我们的开发省去了不必要的麻烦，提高我们的开发效率!</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;那么它是怎么做到的呢。</p> <p>&nbsp; &nbsp; &nbsp; 下面我们以一个简单的例子来说明一下springboot是怎么做到的依赖版本的自动管理。</p> <blockquote> <pre class="has"><code class="language-html">&lt;parent&gt;     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;     &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;     &lt;version&gt;2.1.6.RELEASE&lt;/version&gt;     &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt; &lt;/parent&gt;</code></pre> </blockquote> <p>所有的springboot项目都会依赖这个父pom，在这个父pom我们可以都看到，它又依赖了一个的pom，</p> <blockquote> <pre class="has"><code class="language-html">&lt;parent&gt;   &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;   &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;   &lt;version&gt;2.1.6.RELEASE&lt;/version&gt;   &lt;relativePath&gt;../../spring-boot-dependencies&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</code></pre> </blockquote> <p>再看一下spring-boot-dependencies这个pom</p> <blockquote> <pre class="has"><code class="language-html">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt; &lt;version&gt;2.1.6.RELEASE&lt;/version&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;properties&gt;   &lt;activemq.version&gt;5.15.9&lt;/activemq.version&gt;   &lt;antlr2.version&gt;2.7.7&lt;/antlr2.version&gt;   &lt;appengine-sdk.version&gt;1.9.75&lt;/appengine-sdk.version&gt;   &lt;artemis.version&gt;2.6.4&lt;/artemis.version&gt;   &lt;aspectj.version&gt;1.9.4&lt;/aspectj.version&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 。。。 &lt;/properties&gt;</code></pre> </blockquote> <blockquote> <pre class="has"><code class="language-html">&lt;dependencyManagement&gt; &nbsp; &lt;dependencies&gt; &nbsp; &nbsp;&lt;dependency&gt; &nbsp; &nbsp; &lt;groupId&gt;org.apache.activemq&lt;/groupId&gt; &nbsp; &nbsp; &lt;artifactId&gt;activemq-amqp&lt;/artifactId&gt; &nbsp; &nbsp; &lt;version&gt;${activemq.version}&lt;/version&gt; &nbsp; &nbsp;&lt;/dependency&gt; &nbsp;          。。。 &nbsp; &lt;dependencies&gt; &lt;dependencyManagement&gt; </code></pre> </blockquote> <p>在这个顶级的pom文件中，&lt;properties&gt;标签中主要是管理了各个依赖的版本号，而&lt;dependencyManagement&gt;里面声明了常用的依赖并在&lt;version&gt;中使用了上面&lt;properties&gt;的属性值，定义依赖的版本。而我们在自己的项目中如果需要使用某个依赖，只需要声明&lt;groupId&gt;和&lt;artifacted&gt;就可以引用到这个pom里面声明的依赖和对应的版本。</p> <p>如果要引入一个在spring-boot-dependencies没有定义的依赖，那么则需要在自己的pom中定义依赖的版本。</p> <p>PS:maven的&lt;dependencyManagement&gt;标签里面定义的依赖只起到一个声明的作用,只有在项目中显式的声明依赖，maven才会真正的去给项目下载这个依赖的jar。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-24262.htm">三国杀武将台词语音代码谋黄忠（三国杀黄忠百度百科）</a></p>
+                                        <p>下一个：<a href="/news/article-24727.htm">2022公务员国考报名条件（2022公务员国考报名条件要求）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-9-27-node-share-links.htm" title="9月27日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月27日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-5-node-share.htm" title="10月5日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址">10月5日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-14-free-subscribe-node.htm" title="11月14日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月14日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-5-free-subscribe-node.htm" title="12月5日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月5日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-18782.htm" title="IDEA中配置maven环境">IDEA中配置maven环境</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-12-node-share-links.htm" title="12月12日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">12月12日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-25-node-share-links.htm" title="11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址">11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-6-free-node-subscribe-links.htm" title="12月6日→21.4M/S|2024年最新免费节点Free Vmess订阅链接地址">12月6日→21.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-high-speed-nodes.htm" title="11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-22878.htm" title="宠物疫苗常温下可以放几小时（宠物疫苗常温保存多久失效）">宠物疫苗常温下可以放几小时（宠物疫苗常温保存多久失效）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">36</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

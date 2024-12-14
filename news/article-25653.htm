@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://freevmess.github.io/news/article-25190.htm" />
+        <link rel="canonical" href="https://freevmess.github.io/news/article-25653.htm" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java程序查找数字出现次数为奇数</title>
-        <meta name="description" content="Java程序查找数字出现次数为奇数，Java代码如下- 示例 public&nbsp;class&nbsp;Demo&nbsp;{ &nbsp;&nbsp;&nbsp;static&nbsp;int&" />
+    <title>Goland proto文件 File Watch 自动生成</title>
+        <meta name="description" content="使用的是Kratos的项目模板生成的项目，目录结构如下：每次编写完Proto文件都要手动输入命令来生成go文件，使用Goland的File Watch监听文件改变，然后执行生成命令。 需要有File " />
         <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
     <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
@@ -60,7 +60,7 @@
             <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
                 <div class="row">
                     <div class="col-md-9 mx-auto">
-                        <h1 class="display-1 mb-3">Java程序查找数字出现次数为奇数</h1>
+                        <h1 class="display-1 mb-3">Goland proto文件 File Watch 自动生成</h1>
                         <p class="lead px-xxl-10">
                             <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
                         </p>
@@ -76,10 +76,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<p>Java程序查找数字出现次数为奇数，Java代码如下-</p> <h2>示例</h2> <pre>public&nbsp;class&nbsp;Demo&nbsp;{ &nbsp;&nbsp;&nbsp;static&nbsp;int&nbsp;odd_occurs(int&nbsp;my_arr[],&nbsp;int&nbsp;arr_size){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;arr_size;&nbsp;i++){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;count&nbsp;=&nbsp;0; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;arr_size;&nbsp;j++){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(my_arr[i]&nbsp;==&nbsp;my_arr[j]) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(count&nbsp;%&nbsp;2&nbsp;!=&nbsp;0) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;my_arr[i]; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-1; &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;void&nbsp;main(String[]&nbsp;args){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;my_arr[]&nbsp;=&nbsp;new&nbsp;int[]{&nbsp;34,&nbsp;56,&nbsp;99,&nbsp;34,&nbsp;55,&nbsp;99,&nbsp;90,&nbsp;11,&nbsp;12,&nbsp;11,&nbsp;11,&nbsp;34&nbsp;}; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;arr_size&nbsp;=&nbsp;my_arr.length; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("在数组中出现奇数次的数字是&nbsp;"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(odd_occurs(my_arr,&nbsp;arr_size)); &nbsp;&nbsp;&nbsp;} }</pre> <p>输出结果</p> <pre>在数组中出现奇数次的数字是 34</pre> <p>名为Demo的类包含一个名为'odd_occurs'的静态函数。此函数遍历整数数组，并检查以查看这些数字出现的次数。重复出现的奇数作为输出返回。在main函数中，定义了一个整数数组，并将数组的长度分配给一个变量。通过传递数组及其长度作为参数来调用该函数。相关消息将显示在控制台上。</p> 			                <div class="clearfix"></div>
+                                          				  				  				<div id="content_views" class="markdown_views prism-github-gist"> <p>使用的是Kratos的项目模板生成的项目，目录结构如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230128/61d3d5f6014a83a94229f86aa4e40136.jpg" alt="Goland proto文件 File Watch 自动生成">每次编写完Proto文件都要手动输入命令来生成go文件，使用Goland的File Watch监听文件改变，然后执行生成命令。</p> <p>需要有File Watch这个插件<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230128/54f7ddb5ab2a795cfe8dcff1b38ef0dc.jpg" alt="Goland proto文件 File Watch 自动生成"><br /> 配置：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230128/0cc415f169b5168eedbf2cd13e78970e.jpg" alt="Goland proto文件 File Watch 自动生成"><br /> 直接把命令行的参数替换成变量就行了。<br /> 生成使用的工具是protoc.exe</p> <p><strong>生成Proto</strong><br /> *.pb.go是生成的接口代码<br /> *_grpc.pb.go是grpc服务端接口</p> <p>生成*.pb.go的目录为proto文件的option go_package = “post/internal/conf;conf”;<br /> 生成选项:proto路径(包括引用的package路径),使用–proto_path或-I命令行标志指定;<br /> 输出路径,使用–go_out指定*.pb.go(会跟上面的option go_package一起使用)、–go-grpc_out指定*_grpc.pb.go</p> <p>生成proto源码:<br /><code>kratos proto client api/post/v1/post.proto</code> =&gt;生成 *_grpc.pb.go、*.pb.go</p> <p>项目目录下运行: <code>protoc --go_out=.. --go-grpc_out=.\api\server\v1 --go-grpc_opt=paths=source_relative -I=".\third_party" -I=".\third_party\google" -I=".\api\server\v1" HatService.proto </code> =&gt;生成 <em>_grpc.pb.go、</em>.pb.go</p> <pre><code class="prism language-shell">--go_out<span class="token operator">=</span><span class="token variable">$ProjectFileDir</span>$<span class="token punctuation">\</span><span class="token punctuation">..</span> --go-grpc_out<span class="token operator">=</span><span class="token variable">$FileDir</span>$ --go-grpc_opt<span class="token operator">=</span>paths<span class="token operator">=</span>source_relative -I<span class="token operator">=</span><span class="token string">"<span class="token variable">$ProjectFileDir</span>$<span class="token entity" title="\t">\t</span>hird_party"</span> -I<span class="token operator">=</span><span class="token string">"<span class="token variable">$ProjectFileDir</span>$<span class="token entity" title="\t">\t</span>hird_party\google"</span> -I<span class="token operator">=</span><span class="token string">"<span class="token variable">$ProjectFileDir</span>$<span class="token entity" title="\a">\a</span>pi\server<span class="token entity" title="\v">\v</span>1"</span> <span class="token variable">$FilePath</span>$ </code></pre> <p>$ProjectFileDir$ 是项目的目录<br /> $FilePath$ 是监控到变更文件的路径<br /> -I参数是添加包proto文件依赖</p> <p>show console可以改为always来查看日志。<br /> 保存配置后每次修改都会自动生成go文件</p> </p></div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-24727.htm">2022公务员国考报名条件（2022公务员国考报名条件要求）</a></p>
-                                        <p>下一个：<a href="/news/article-25191.htm">动物防疫疫苗种类有哪些类型（动物疫苗法最新消息2019）</a></p>
+                                        <p>上一个：<a href="/news/article-25191.htm">动物防疫疫苗种类有哪些类型（动物疫苗法最新消息2019）</a></p>
+                                        <p>下一个：<a href="/news/article-25656.htm">中牧疫苗价格（中牧疫苗价格一瓶多少头份）</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -89,16 +89,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-12-8-free-node-subscribe-links.htm" title="12月8日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址">12月8日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-16-free-node-subscribe-links.htm" title="9月16日→18M/S|2024年最新免费节点Free Vmess订阅链接地址">9月16日→18M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-18781.htm" title="vue项目几个比较好的实践(路由模块化，打包dll优化，vuex)">vue项目几个比较好的实践(路由模块化，打包dll优化，vuex)</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-14-node-share.htm" title="10月14日→21.5M/S|2024年最新免费节点Free Vmess订阅链接地址">10月14日→21.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-14-node-share.htm" title="12月14日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">12月14日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-14-free-node-subscribe-links.htm" title="9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址">9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-24725.htm" title="springboot之依赖版本管理">springboot之依赖版本管理</a></li>
-                        <li class="py-2"><a href="/news/article-24261.htm" title="java8 List&lt;Object&gt;去掉重复对象的几种方法_java">java8 List&lt;Object&gt;去掉重复对象的几种方法_java</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-21-free-node-subscribe.htm" title="10月21日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址">10月21日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-25191.htm" title="动物防疫疫苗种类有哪些类型（动物疫苗法最新消息2019）">动物防疫疫苗种类有哪些类型（动物疫苗法最新消息2019）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-6-free-node-subscribe-links.htm" title="12月6日→21.4M/S|2024年最新免费节点Free Vmess订阅链接地址">12月6日→21.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-28-node-share.htm" title="9月28日→19.5M/S|2024年最新免费节点Free Vmess订阅链接地址">9月28日→19.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-free-node-subscribe-links.htm" title="12月3日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址">12月3日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-2-node-share-links.htm" title="11月2日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址">11月2日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-4-free-subscribe-node.htm" title="12月4日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址">12月4日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-26-free-high-speed-nodes.htm" title="10月26日→22.6M/S|2024年最新免费节点Free Vmess订阅链接地址">10月26日→22.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-11-25-node-share-links.htm" title="11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址">11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-14-free-node-subscribe-links.htm" title="9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址">9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-28-free-node-subscribe-links.htm" title="10月28日→22.6M/S|2024年最新免费节点Free Vmess订阅链接地址">10月28日→22.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                     </ul>
     </div>
 </div>

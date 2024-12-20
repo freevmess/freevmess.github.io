@@ -76,7 +76,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp; &nbsp; &nbsp; &nbsp;我们在使用springboot项目的时候，在我们的pom文件中，我们引入的依赖通常不需要制定依赖的版本,但是maven却能够给我们下载正常的jar包。</p> <p>&nbsp; &nbsp; &nbsp; 在普通的spring项目的中我们需要自己去定义依赖的版本，经常会遇到jar包冲突的情况，springboot自动的帮我们管理这些依赖的版本，给我们的开发省去了不必要的麻烦，提高我们的开发效率!</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;那么它是怎么做到的呢。</p> <p>&nbsp; &nbsp; &nbsp; 下面我们以一个简单的例子来说明一下springboot是怎么做到的依赖版本的自动管理。</p> <blockquote> <pre class="has"><code class="language-html">&lt;parent&gt;     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;     &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;     &lt;version&gt;2.1.6.RELEASE&lt;/version&gt;     &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt; &lt;/parent&gt;</code></pre> </blockquote> <p>所有的springboot项目都会依赖这个父pom，在这个父pom我们可以都看到，它又依赖了一个的pom，</p> <blockquote> <pre class="has"><code class="language-html">&lt;parent&gt;   &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;   &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;   &lt;version&gt;2.1.6.RELEASE&lt;/version&gt;   &lt;relativePath&gt;../../spring-boot-dependencies&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</code></pre> </blockquote> <p>再看一下spring-boot-dependencies这个pom</p> <blockquote> <pre class="has"><code class="language-html">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt; &lt;version&gt;2.1.6.RELEASE&lt;/version&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;properties&gt;   &lt;activemq.version&gt;5.15.9&lt;/activemq.version&gt;   &lt;antlr2.version&gt;2.7.7&lt;/antlr2.version&gt;   &lt;appengine-sdk.version&gt;1.9.75&lt;/appengine-sdk.version&gt;   &lt;artemis.version&gt;2.6.4&lt;/artemis.version&gt;   &lt;aspectj.version&gt;1.9.4&lt;/aspectj.version&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 。。。 &lt;/properties&gt;</code></pre> </blockquote> <blockquote> <pre class="has"><code class="language-html">&lt;dependencyManagement&gt; &nbsp; &lt;dependencies&gt; &nbsp; &nbsp;&lt;dependency&gt; &nbsp; &nbsp; &lt;groupId&gt;org.apache.activemq&lt;/groupId&gt; &nbsp; &nbsp; &lt;artifactId&gt;activemq-amqp&lt;/artifactId&gt; &nbsp; &nbsp; &lt;version&gt;${activemq.version}&lt;/version&gt; &nbsp; &nbsp;&lt;/dependency&gt; &nbsp;          。。。 &nbsp; &lt;dependencies&gt; &lt;dependencyManagement&gt; </code></pre> </blockquote> <p>在这个顶级的pom文件中，&lt;properties&gt;标签中主要是管理了各个依赖的版本号，而&lt;dependencyManagement&gt;里面声明了常用的依赖并在&lt;version&gt;中使用了上面&lt;properties&gt;的属性值，定义依赖的版本。而我们在自己的项目中如果需要使用某个依赖，只需要声明&lt;groupId&gt;和&lt;artifacted&gt;就可以引用到这个pom里面声明的依赖和对应的版本。</p> <p>如果要引入一个在spring-boot-dependencies没有定义的依赖，那么则需要在自己的pom中定义依赖的版本。</p> <p>PS:maven的&lt;dependencyManagement&gt;标签里面定义的依赖只起到一个声明的作用,只有在项目中显式的声明依赖，maven才会真正的去给项目下载这个依赖的jar。</p> </p></div> 			                <div class="clearfix"></div>
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp; &nbsp; &nbsp; &nbsp;我们在使用springboot项目的时候，在我们的pom文件中，我们引入的依赖通常不需要制定依赖的版本,但是maven却能够给我们下载正常的jar包。</p> <p>&nbsp; &nbsp; &nbsp; 在普通的spring项目的中我们需要自己去定义依赖的版本，经常会遇到jar包冲突的情况，springboot自动的帮我们管理这些依赖的版本，给我们的开发省去了不必要的麻烦，提高我们的开发效率!</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;那么它是怎么做到的呢。</p> <p>&nbsp; &nbsp; &nbsp; 下面我们以一个简单的例子来说明一下springboot是怎么做到的依赖版本的自动管理。</p> <blockquote> <pre class="has"><code class="language-html">&lt;parent&gt;     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;     &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;     &lt;version&gt;2.1.6.RELEASE&lt;/version&gt;     &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt; &lt;/parent&gt;</code></pre> </blockquote> <p>所有的springboot项目都会依赖这个父pom，在这个父pom我们可以都看到，它又依赖了一个的pom，</p> <blockquote> <pre class="has"><code class="language-html">&lt;parent&gt;   &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;   &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;   &lt;version&gt;2.1.6.RELEASE&lt;/version&gt;   &lt;relativePath&gt;../../spring-boot-dependencies&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</code></pre> </blockquote> <p>再看一下spring-boot-dependencies这个pom</p> <blockquote> <pre class="has"><code class="language-html">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt; &lt;version&gt;2.1.6.RELEASE&lt;/version&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;properties&gt;   &lt;activemq.version&gt;5.15.9&lt;/activemq.version&gt;   &lt;antlr2.version&gt;2.7.7&lt;/antlr2.version&gt;   &lt;appengine-sdk.version&gt;1.9.75&lt;/appengine-sdk.version&gt;   &lt;artemis.version&gt;2.6.4&lt;/artemis.version&gt;   &lt;aspectj.version&gt;1.9.4&lt;/aspectj.version&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 。。。 &lt;/properties&gt;</code></pre> </blockquote> <blockquote> <pre class="has"><code class="language-html">&lt;dependencyManagement&gt; &nbsp; &lt;dependencies&gt; &nbsp; &nbsp;&lt;dependency&gt; &nbsp; &nbsp; &lt;groupId&gt;org.apache.activemq&lt;/groupId&gt; &nbsp; &nbsp; &lt;artifactId&gt;activemq-amqp&lt;/artifactId&gt; &nbsp; &nbsp; &lt;version&gt;${activemq.version}&lt;/version&gt; &nbsp; &nbsp;&lt;/dependency&gt; &nbsp;          。。。 &nbsp; &lt;dependencies&gt; &lt;dependencyManagement&gt; </code></pre> </blockquote> <p>在这个顶级的pom文件中，&lt;properties&gt;标签中主要是管理了各个依赖的版本号，而&lt;dependencyManagement&gt;里面声明了常用的依赖并在&lt;version&gt;中使用了上面&lt;properties&gt;的属性值，定义依赖的版本。而我们在自己的项目中如果需要使用某个依赖，只需要声明&lt;groupId&gt;和&lt;artifacted&gt;就可以引用到这个pom里面声明的依赖和对应的版本。</p> <p>如果要引入一个在spring-boot-dependencies没有定义的依赖，那么则需要在自己的pom中定义依赖的版本。</p> <p>PS:maven的&lt;dependencyManagement&gt;标签里面定义的依赖只起到一个声明的作用,只有在项目中显式的声明依赖，maven才会真正的去给项目下载这个依赖的jar。</p> </p></div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-24262.htm">三国杀武将台词语音代码谋黄忠（三国杀黄忠百度百科）</a></p>
                                         <p>下一个：<a href="/news/article-24727.htm">2022公务员国考报名条件（2022公务员国考报名条件要求）</a></p>
@@ -89,16 +90,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-10-23-node-share-links.htm" title="10月23日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">10月23日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-25-node-share-links.htm" title="11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址">11月25日→21M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-21043.htm" title="动物防疫站能给人打狂犬疫苗吗要钱吗知乎（动物防疫站打针免费吗）">动物防疫站能给人打狂犬疫苗吗要钱吗知乎（动物防疫站打针免费吗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-13-node-share-links.htm" title="11月13日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月13日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-1-free-subscribe-node.htm" title="12月1日→22M/S|2024年最新免费节点Free Vmess订阅链接地址">12月1日→22M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-23793.htm" title="去宠物店治疗猫藓多少钱（去宠物店治猫藓要多少钱）">去宠物店治疗猫藓多少钱（去宠物店治猫藓要多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-22417.htm" title="正大饲料加盟代理（正大饲料加盟代理好做吗）">正大饲料加盟代理（正大饲料加盟代理好做吗）</a></li>
+                        <li class="py-2"><a href="/news/article-20586.htm" title="一只猫多少钱最便宜（一只家猫多少钱）">一只猫多少钱最便宜（一只家猫多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-6-node-share-links.htm" title="10月6日→20.7M/S|2024年最新免费节点Free Vmess订阅链接地址">10月6日→20.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-free-node-subscribe-links.htm" title="12月3日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址">12月3日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-high-speed-nodes.htm" title="11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-30-free-subscribe-node.htm" title="9月30日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址">9月30日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-23326.htm" title="宠物粮行业品牌分析报告总结（宠物粮市场份额）">宠物粮行业品牌分析报告总结（宠物粮市场份额）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-free-node-subscribe-links.htm" title="10月11日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址">10月11日→20.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-11-17-node-share-links.htm" title="11月17日→21M/S|2024年最新免费节点Free Vmess订阅链接地址">11月17日→21M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-28-free-node-subscribe-links.htm" title="11月28日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月28日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-23792.htm" title="动物疫苗接种方法有哪些种类的 动物疫苗接种方法有哪些种类的图片">动物疫苗接种方法有哪些种类的 动物疫苗接种方法有哪些种类的图片</a></li>
-                        <li class="py-2"><a href="/news/article-21510.htm" title="动物医院实践心得体会怎么写啊（动物医院实践心得2000）">动物医院实践心得体会怎么写啊（动物医院实践心得2000）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-18-free-node-subscribe-links.htm" title="12月18日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月18日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -110,7 +111,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -135,6 +136,15 @@
         <div class="container">
             <div class="row py-3">
                 <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                     <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
                 </p>
             </div>

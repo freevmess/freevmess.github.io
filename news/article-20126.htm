@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS3怎么为文字添加背景?</title>
         <meta name="description" content="这两天在写官网,标题标语之类的文字都是带有流光溢、炫酷图案的文字 大致就像苹果官网上的那些slogan吧,可不是简单的渐变色之类哦 但是由于使用了CSS3属性,所以要考虑到兼容性,仅Webkit内核的" />
-        <link rel="icon" href="__ADDON__/img/freevmess/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
     <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
     <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
@@ -76,7 +76,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="htmledit_views"> <p>这两天在写官网,标题标语之类的文字都是带有流光溢、炫酷图案的文字</p> <p>大致就像苹果官网上的那些slogan吧,可不是简单的渐变色之类哦</p> <p>但是由于使用了CSS3属性,所以要考虑到兼容性,仅Webkit内核的浏览器适用</p> <p>效果如下:</p> <p><img decoding="async" alt="" class="has" height="88" src="http://img.555519.xyz/uploads3/20220605/9f2e9bd392f4fe5ca077d34b5f2fa1f7.jpg"></p> <p>设计师随后给我发来了一个图案background.jpg:</p> <p><img decoding="async" alt="" class="has" height="122" src="http://img.555519.xyz/uploads3/20220605/50b379b1054000ca9f01ff7c90ac23d0.jpg"></p> <p>就拿这张图做背景,即可实现需求,</p> <p>具体操作如下:</p> <pre class="has"><code> &lt;!DOCTYPE html&gt; &lt;html&gt;   &lt;head&gt;     &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;style type="text/css"&gt;     * {         font-family: fantasy;         font-size: 1.8em;     }       div {         height: auto; //根据需求而定         width: auto;//根据需求而定         background: url(background.jpg) no-repeat;  // 背景图         background-origin: border-box;         -webkit-background-clip: text;         -webkit-text-fill-color: transparent;               } &lt;/style&gt;   &lt;body&gt;     &lt;div&gt;影像随用随取&lt;/div&gt; &lt;/body&gt;   &lt;/html&gt;</code></pre> <p>这个解决方案是参考一位网友的,他在文章中提到:</p> <p>"由于是css3的,所以有些浏览器不支持,而且text-till-color:transparent是Webkit内核的私有属性,所以其他非webkit浏览器可能不行."</p> <p>抽空查了查css3,</p> <p>background-clip指背景剪裁的位置.</p> <p>比如:通常为盒子添加背景色后,整个盒子包括边框在内,都后有背景色;</p> <p>可一旦添加上background-clip属性,</p> <p>如background-clip: padding-box; 那么背景只在padding到content的区域显示,边框不显示背景图;</p> <p>如&nbsp;background-clip: content-box;那么背景只显示在content区域,其以外均不显示背景图;</p> <p>上面代码background-clip: text;表示只为文本添加背景图</p> <p>background-origin指背景图显示的位置,</p> <table> <tbody> <tr> <td>padding-box</td> <td>背景图像填充框的相对位置</td> </tr> <tr> <td>border-box</td> <td>背景图像边界框的相对位置</td> </tr> <tr> <td>content-box</td> <td>背景图像的相对位置的内容框</td> </tr> </tbody> </table> <p>这个属性私以为也可以不写~~~</p> <p>text-fill-color,文本填充颜色,通常设为transparent,透明色;&nbsp;这个属性对于我写的那个效果,私以为也可以不写~~~</p> <p>最常见的渐变色文字效果,就脱离不了text-fill-color的功能</p> <pre class="has"><code>background-image:-webkit-linear-gradient(#eee,#000); -webkit-background-clip:text; -webkit-text-fill-color:transparent;</code></pre> </div> 			                <div class="clearfix"></div>
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>这两天在写官网,标题标语之类的文字都是带有流光溢、炫酷图案的文字</p> <p>大致就像苹果官网上的那些slogan吧,可不是简单的渐变色之类哦</p> <p>但是由于使用了CSS3属性,所以要考虑到兼容性,仅Webkit内核的浏览器适用</p> <p>效果如下:</p> <p><img decoding="async" alt="" class="has" height="88" src="http://img.555519.xyz/uploads3/20220605/9f2e9bd392f4fe5ca077d34b5f2fa1f7.jpg"></p> <p>设计师随后给我发来了一个图案background.jpg:</p> <p><img decoding="async" alt="" class="has" height="122" src="http://img.555519.xyz/uploads3/20220605/50b379b1054000ca9f01ff7c90ac23d0.jpg"></p> <p>就拿这张图做背景,即可实现需求,</p> <p>具体操作如下:</p> <pre class="has"><code> &lt;!DOCTYPE html&gt; &lt;html&gt;   &lt;head&gt;     &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;style type="text/css"&gt;     * {         font-family: fantasy;         font-size: 1.8em;     }       div {         height: auto; //根据需求而定         width: auto;//根据需求而定         background: url(background.jpg) no-repeat;  // 背景图         background-origin: border-box;         -webkit-background-clip: text;         -webkit-text-fill-color: transparent;               } &lt;/style&gt;   &lt;body&gt;     &lt;div&gt;影像随用随取&lt;/div&gt; &lt;/body&gt;   &lt;/html&gt;</code></pre> <p>这个解决方案是参考一位网友的,他在文章中提到:</p> <p>"由于是css3的,所以有些浏览器不支持,而且text-till-color:transparent是Webkit内核的私有属性,所以其他非webkit浏览器可能不行."</p> <p>抽空查了查css3,</p> <p>background-clip指背景剪裁的位置.</p> <p>比如:通常为盒子添加背景色后,整个盒子包括边框在内,都后有背景色;</p> <p>可一旦添加上background-clip属性,</p> <p>如background-clip: padding-box; 那么背景只在padding到content的区域显示,边框不显示背景图;</p> <p>如&nbsp;background-clip: content-box;那么背景只显示在content区域,其以外均不显示背景图;</p> <p>上面代码background-clip: text;表示只为文本添加背景图</p> <p>background-origin指背景图显示的位置,</p> <table> <tbody> <tr> <td>padding-box</td> <td>背景图像填充框的相对位置</td> </tr> <tr> <td>border-box</td> <td>背景图像边界框的相对位置</td> </tr> <tr> <td>content-box</td> <td>背景图像的相对位置的内容框</td> </tr> </tbody> </table> <p>这个属性私以为也可以不写~~~</p> <p>text-fill-color,文本填充颜色,通常设为transparent,透明色;&nbsp;这个属性对于我写的那个效果,私以为也可以不写~~~</p> <p>最常见的渐变色文字效果,就脱离不了text-fill-color的功能</p> <pre class="has"><code>background-image:-webkit-linear-gradient(#eee,#000); -webkit-background-clip:text; -webkit-text-fill-color:transparent;</code></pre> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-19670.htm">小猫咪打三针疫苗的时间间隔（猫咪打三针疫苗需要多久）</a></p>
                                         <p>下一个：<a href="/news/article-20127.htm">动物接种疫苗多少次有效呢（动物接种疫苗多少次有效呢）</a></p>
@@ -89,16 +90,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-10-20-node-share.htm" title="10月20日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址">10月20日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-18-node-share-links.htm" title="9月18日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月18日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-20-node-share-links.htm" title="11月20日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址">11月20日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-18781.htm" title="vue项目几个比较好的实践(路由模块化，打包dll优化，vuex)">vue项目几个比较好的实践(路由模块化，打包dll优化，vuex)</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-19-node-share.htm" title="10月19日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址">10月19日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-23327.htm" title="动物疫苗工艺（动物疫苗工艺要求）">动物疫苗工艺（动物疫苗工艺要求）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-1-node-share.htm" title="11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-3-free-subscribe-node.htm" title="10月3日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址">10月3日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-high-speed-nodes.htm" title="11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-13-free-subscribe-node.htm" title="12月13日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月13日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-9-20-node-share-links.htm" title="9月20日→19.5M/S|2024年最新免费节点Free Vmess订阅链接地址">9月20日→19.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-12-free-node-subscribe.htm" title="10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址">10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-12-free-node-subscribe-links.htm" title="9月12日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址">9月12日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-18-node-share-links.htm" title="10月18日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址">10月18日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-17-node-share-links.htm" title="9月17日→19.7M/S|2024年最新免费节点Free Vmess订阅链接地址">9月17日→19.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-free-node-subscribe-links.htm" title="11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-6-free-high-speed-nodes.htm" title="11月6日→18M/S|2024年最新免费节点Free Vmess订阅链接地址">11月6日→18M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-25-free-node-subscribe.htm" title="9月25日→19.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月25日→19.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-16-free-node-subscribe-links.htm" title="9月16日→18M/S|2024年最新免费节点Free Vmess订阅链接地址">9月16日→18M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -110,7 +111,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -135,6 +136,15 @@
         <div class="container">
             <div class="row py-3">
                 <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                     <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
                 </p>
             </div>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue +Vant 实现顶部搜索栏</title>
         <meta name="description" content="&lt;template&gt;   &lt;section class="city-search"&gt;     &lt;van-icon class="search-icon" name="se" />
-        <link rel="icon" href="__ADDON__/img/freevmess/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
     <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
     <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
@@ -76,7 +76,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="htmledit_views"> </h1> <pre><code>&lt;template&gt;   &lt;section class="city-search"&gt;     &lt;van-icon class="search-icon" name="search" /&gt;     &lt;input  placeholder="在此输入检索关键字" v-model="KeyWord"&gt;     &lt;van-icon class="clear-icon" name="clear" v-show="KeyWord" @click="clearSearchInput" /&gt;   &lt;/section&gt; &lt;/template&gt;  &lt;script&gt; export default {    data() {         return {             KeyWord: '',         }     },     methods: {         clearSearchInput() {             this.KeyWord = '';         }     } } &lt;/script&gt;  &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt; &lt;style&gt;     .city-search {         background-color: #F7F8FA;         display: flex;         justify-content: flex-start;         align-items: center;         height: 2.3rem;         width: 94vw;         margin: 2vw 4vw;         border-radius: 8px;     }     .search-icon {       margin-left: 5px;     }     input {       margin: 0 1.5vw;       background-color: #F7F8FA;       border: 0px;       font-size: 14px;       flex: 1     }     .clear-icon { color: #999;}    &lt;/style&gt;</code></pre> </h1> <p>首页引用搜索组件:</p> <pre><code>&lt;template&gt;   &lt;div&gt;       &lt;search&gt;&lt;/search&gt;         首页   &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; import Search from '@/components/SearchBar' export default {    name: "home",    components: {       'search': Search,     }, } &lt;/script&gt;  &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt; &lt;style&gt;  &lt;/style&gt;</code></pre> <p>效果截图:</p> <p><img fetchpriority="high" decoding="async" alt="" height="548" src="http://img.555519.xyz/uploads3/20220904/1286c073c6305021e8601f5f643b2b41.jpg"></p> </div> 			                <div class="clearfix"></div>
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <pre><code>&lt;template&gt;   &lt;section class="city-search"&gt;     &lt;van-icon class="search-icon" name="search" /&gt;     &lt;input  placeholder="在此输入检索关键字" v-model="KeyWord"&gt;     &lt;van-icon class="clear-icon" name="clear" v-show="KeyWord" @click="clearSearchInput" /&gt;   &lt;/section&gt; &lt;/template&gt;  &lt;script&gt; export default {    data() {         return {             KeyWord: '',         }     },     methods: {         clearSearchInput() {             this.KeyWord = '';         }     } } &lt;/script&gt;  &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt; &lt;style&gt;     .city-search {         background-color: #F7F8FA;         display: flex;         justify-content: flex-start;         align-items: center;         height: 2.3rem;         width: 94vw;         margin: 2vw 4vw;         border-radius: 8px;     }     .search-icon {       margin-left: 5px;     }     input {       margin: 0 1.5vw;       background-color: #F7F8FA;       border: 0px;       font-size: 14px;       flex: 1     }     .clear-icon { color: #999;}    &lt;/style&gt;</code></pre> </h1> <p>首页引用搜索组件:</p> <pre><code>&lt;template&gt;   &lt;div&gt;       &lt;search&gt;&lt;/search&gt;         首页   &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; import Search from '@/components/SearchBar' export default {    name: "home",    components: {       'search': Search,     }, } &lt;/script&gt;  &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt; &lt;style&gt;  &lt;/style&gt;</code></pre> <p>效果截图:</p> <p><img fetchpriority="high" decoding="async" alt="" height="548" src="http://img.555519.xyz/uploads3/20220904/1286c073c6305021e8601f5f643b2b41.jpg"></p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-21510.htm">动物医院实践心得体会怎么写啊（动物医院实践心得2000）</a></p>
                                         <p>下一个：<a href="/news/article-21953.htm">宠物寄养店怎么开行情怎么样（宠物寄养店怎么运营）</a></p>
@@ -89,16 +90,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-10-30-free-subscribe-node.htm" title="10月30日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址">10月30日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-4-free-subscribe-node.htm" title="12月4日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址">12月4日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-21-node-share.htm" title="9月21日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月21日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-28-free-node-subscribe-links.htm" title="11月28日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月28日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-21953.htm" title="宠物寄养店怎么开行情怎么样（宠物寄养店怎么运营）">宠物寄养店怎么开行情怎么样（宠物寄养店怎么运营）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-12-free-node-subscribe.htm" title="10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址">10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-20-node-share.htm" title="10月20日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址">10月20日→22.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-11-free-node-subscribe-links.htm" title="11月11日→18.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月11日→18.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-14-free-node-subscribe-links.htm" title="9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址">9月14日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-27-node-share-links.htm" title="9月27日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月27日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-27053.htm" title="动物活疫苗与死疫苗的区别在哪（动物灭活疫苗）">动物活疫苗与死疫苗的区别在哪（动物灭活疫苗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-29-free-subscribe-node.htm" title="9月29日→19M/S|2024年最新免费节点Free Vmess订阅链接地址">9月29日→19M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-free-node-subscribe-links.htm" title="11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-22419.htm" title="兽用疫苗可以m网上买吗（兽药店可以买疫苗吗）">兽用疫苗可以m网上买吗（兽药店可以买疫苗吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-2-node-share-links.htm" title="10月2日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址">10月2日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-18-node-share-links.htm" title="9月18日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月18日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-18-free-node-subscribe-links.htm" title="12月18日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月18日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-12-free-node-subscribe-links.htm" title="9月12日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址">9月12日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-8-node-share.htm" title="11月8日→18.1M/S|2024年最新免费节点Free Vmess订阅链接地址">11月8日→18.1M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-free-high-speed-nodes.htm" title="11月30日→18M/S|2024年最新免费节点Free Vmess订阅链接地址">11月30日→18M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -110,7 +111,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -135,6 +136,15 @@
         <div class="container">
             <div class="row py-3">
                 <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                     <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
                 </p>
             </div>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-30816.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker提交镜像-数据卷-可视化</title>
+        <meta name="description" content="在熟悉完Docker的安装及基本命令使用之后，我们开始学习下Docker的进阶操作：包括但不限于新建Docker镜像，数据卷的挂载，以及Docker的可视化等。  启动镜像 我们先安装一个tomcat" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                                                <a href="/">
+                            <span>Free Vmess</span>
+                        </a>
+                                            </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">Docker提交镜像-数据卷-可视化</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p class="md-end-block md-p"><span class="md-plain md-expand">在熟悉完Docker的安装及基本命令使用之后，我们开始学习下Docker的进阶操作：包括但不限于新建Docker镜像，数据卷的挂载，以及Docker的可视化等。</span></p> </h1> <h2 class="md-end-block md-heading"><span class="md-plain">启动镜像</span></h2> <p class="md-end-block md-p"><span class="md-plain">我们先安装一个tomcat</span></p> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -d -p 8080:8080 tomcat</code></span></p> <p class="md-end-block md-p"><span class="md-plain">然后访问：</span><span class="md-link md-pair-s" spellcheck="false"><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://192.168.88.71:8080/"  rel="nofollow">http://192.168.88.71:8080/</a></span></p> <p class="md-end-block md-p"><span class="md-plain">容器虽然启动了，但页面404，其实是默认没有访问页面</span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>[root@hadoop101 ~]# docker ps CONTAINER ID &nbsp; IMAGE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; COMMAND &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CREATED &nbsp; &nbsp; &nbsp; &nbsp;  STATUS &nbsp; &nbsp; &nbsp; &nbsp;  PORTS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  NAMES 7f7e60ca6bf5 &nbsp; tomcat &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"catalina.sh run" &nbsp; &nbsp; &nbsp; &nbsp;6 seconds ago &nbsp;  Up 4 seconds &nbsp; &nbsp;0.0.0.0:8080-&gt;8080/tcp, :::8080-&gt;8080/tcp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  wonderful_satoshi </code></pre> <h2 class="md-end-block md-heading"><span class="md-plain">修改容器</span></h2> <p class="md-end-block md-p"><span class="md-plain">tomcat为了简化启动流程，省略了加载页面的操作，所以访问404，我们可以进入容器，修改一下相关配置</span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>[root@hadoop101 ~]# docker exec -it 7f7e60ca6bf5 /bin/bash root@7f7e60ca6bf5:/usr/local/tomcat# ls BUILDING.txt &nbsp; &nbsp; LICENSE  README.md &nbsp; &nbsp;  RUNNING.txt  conf  logs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  temp &nbsp; &nbsp; webapps.dist CONTRIBUTING.md  NOTICE &nbsp; RELEASE-NOTES  bin &nbsp; &nbsp; &nbsp; &nbsp;  lib &nbsp; native-jni-lib  webapps  work root@7f7e60ca6bf5:/usr/local/tomcat# cp -r webapps.dist/* webapps root@7f7e60ca6bf5:/usr/local/tomcat#</code></pre> <p class="md-end-block md-p"><span class="md-plain">tomcat的静态页面备份在了webapps.dist目录下，我们将其复制到webapps下即可。</span></p> <p class="md-end-block md-p"><span class="md-plain">再次访问：</span><span class="md-link md-pair-s" spellcheck="false"><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://192.168.88.71:8080/"  rel="nofollow">http://192.168.88.71:8080/</a></span><span class="md-plain"> ，我们熟悉的页面正常显示了。</span></p> <h2 class="md-end-block md-heading"><span class="md-plain">提交镜像</span></h2> <p class="md-end-block md-p"><span class="md-plain">然后把我修改后的容器重新提交成一个新的镜像。</span></p> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker commit -m "cp webapps files" -a "zhangbao" 7f7e60ca6bf5  tomcat001:1.0</code></span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>[root@hadoop101 ~]# docker commit -m "cp webapps files" -a "zhangbao" 7f7e60ca6bf5  tomcat001:1.0 sha256:1bcaa367798ccbea30337645a4839db5878a40eaed92e5c5d66c3df13edae738 [root@hadoop101 ~]# docker images REPOSITORY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  TAG &nbsp; &nbsp; &nbsp; IMAGE ID &nbsp; &nbsp; &nbsp; CREATED &nbsp; &nbsp; &nbsp; &nbsp; SIZE tomcat001 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.0 &nbsp; &nbsp; &nbsp; 1bcaa367798c &nbsp; 7 seconds ago &nbsp; 684MB tomcat &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  latest &nbsp;  fb5657adc892 &nbsp; 2 months ago &nbsp;  680MB</code></pre> <p class="md-end-block md-p"><span class="md-plain">发现比之前大了一点点。</span></p> <h2 class="md-end-block md-heading"><span class="md-plain">启动新镜像</span></h2> <p class="md-end-block md-p"><span class="md-plain">我们再启动新提交后的镜像</span></p> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -d -p 8081:8080 tomcat001:1.0</code></span></p> <p class="md-end-block md-p"><span class="md-plain">访问</span><span class="md-link md-pair-s" spellcheck="false"><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://192.168.88.71:8081/"  rel="nofollow">http://192.168.88.71:8081/</a></span><span class="md-plain">，直接显示正常页面。</span></p> </h1> <h2 class="md-end-block md-heading"><span class="md-plain">背景</span></h2> <p class="md-end-block md-p"><span class="md-plain">启动一个容器后，容器内的配置或者数据也在容器中，当我们删掉容器，整个容器及内部的配置及数据都会丢失，这是不正常的，所以Docker提供了数据卷的功能，即把容器内的配置或数据映射到宿主机上，实现双向绑定，当我们要删掉一个容器的时候，其数据还可保留，当我们修改容器的配置，也不需要进入容器，可直接在映射文件中修改。</span></p> <h2 class="md-end-block md-heading"><span class="md-plain">启动镜像并添加数据卷</span></h2> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -it -p 8080:8080 -v /opt/test:/opt tomcat001:1.0 /bin/bash</code></span></p> <p class="md-end-block md-p"><span class="md-plain">此命令表示运行一个tomcat001镜像，宿主机端口和容器端口都是8080，</span><span class="md-pair-s" spellcheck="false"><code>-v /opt/test:/opt</code></span><span class="md-plain"> 表示把容器内目录</span><span class="md-pair-s" spellcheck="false"><code>/opt</code></span><span class="md-plain"> 目录挂载到宿主机</span><span class="md-pair-s" spellcheck="false"><code>/opt/test</code></span><span class="md-plain"> 目录下，这样两边就实现了双向绑定。</span></p> <h2 class="md-end-block md-heading"><span class="md-plain">验证</span></h2> <p class="md-end-block md-p"><span class="md-plain">注：上个命令不可 ctrl+c 或者 exit退出，否则容器也直接退出了，用 ctrl+p+q 后台启动</span></p> <p class="md-end-block md-p"><span class="md-plain">我们直接在宿主机的</span><span class="md-pair-s" spellcheck="false"><code>/opt/test</code></span><span class="md-plain">目录下新建文件</span><span class="md-pair-s" spellcheck="false"><code>test.txt</code></span><span class="md-plain">，然后查看容器内的</span><span class="md-pair-s" spellcheck="false"><code>/opt</code></span><span class="md-plain">目录下的变化</span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code># 宿主机 [root@hadoop101 opt]# cd /opt/test [root@hadoop101 test]# touch test.txt [root@hadoop101 test]# ll total 0 -rw-r--r-- 1 root root 0 Mar 19 22:33 test.txt  #容器内 [root@hadoop101 ~]# docker ps CONTAINER ID &nbsp; IMAGE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; COMMAND &nbsp; &nbsp; &nbsp; CREATED &nbsp; &nbsp; &nbsp; &nbsp; STATUS &nbsp; &nbsp; &nbsp; &nbsp; PORTS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NAMES 04331e8ef590 &nbsp; tomcat001:1.0 &nbsp; "/bin/bash" &nbsp; 7 minutes ago &nbsp; Up 7 minutes &nbsp; 0.0.0.0:8080-&gt;8080/tcp, :::8080-&gt;8080/tcp &nbsp; crazy_mclaren [root@hadoop101 ~]# docker attach 04331e8ef590 root@04331e8ef590:/usr/local/tomcat# cd /opt/ root@04331e8ef590:/opt# ls test.txt </code></pre> <p class="md-end-block md-p"><span class="md-plain">同样的，我们在容器内修改文件内容，在宿主机也可以实时查看文件内容，并且在停止容器后，我们在宿主机上修改文件，然后再启动容器，容器内的文件同样被修改了。</span></p> <h2 class="md-end-block md-heading"><span class="md-plain">安装msyql</span></h2> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -d -p 3301:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql001 mysql:5.7</code></span></p> <blockquote> <p class="md-end-block md-p"><span class="md-plain">-p 宿主机端口:容器端口</span></p> <p class="md-end-block md-p"><span class="md-plain">-v 宿主机目录:容器目录，可多个-v</span></p> <p class="md-end-block md-p"><span class="md-plain">-e 变量配置</span></p> <p class="md-end-block md-p"><span class="md-plain">--name 容器名字</span></p> </blockquote> <p class="md-end-block md-p"><span class="md-plain">这里我们将mysql容器的配置文件和数据目录挂载到宿主机的</span><span class="md-pair-s" spellcheck="false"><code>/home/mysql</code></span><span class="md-plain">目录下</span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>[root@hadoop101 ~]# cd /home/mysql/ [root@hadoop101 mysql]# ll total 0 drwxr-xr-x 2 root &nbsp;  root &nbsp; 6 Mar 19 23:13 conf drwxr-xr-x 5 polkitd root 328 Mar 19 23:13 data [root@hadoop101 mysql]# cd data [root@hadoop101 data]# ls auto.cnf &nbsp;  client-cert.pem  ibdata1 &nbsp; &nbsp;  ibtmp1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  private_key.pem  server-key.pem ca-key.pem  client-key.pem &nbsp; ib_logfile0  mysql &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; public_key.pem &nbsp; sys ca.pem &nbsp; &nbsp;  ib_buffer_pool &nbsp; ib_logfile1  performance_schema  server-cert.pem [root@hadoop101 data]#</code></pre> <p class="md-end-block md-p"><span class="md-plain">然后我们通过Navicat连接，并新建数据库test，再次查看数据目录</span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>[root@hadoop101 data]# ls auto.cnf &nbsp;  client-cert.pem  ibdata1 &nbsp; &nbsp;  ibtmp1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  private_key.pem  server-key.pem ca-key.pem  client-key.pem &nbsp; ib_logfile0  mysql &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; public_key.pem &nbsp; sys ca.pem &nbsp; &nbsp;  ib_buffer_pool &nbsp; ib_logfile1  performance_schema  server-cert.pem  test [root@hadoop101 data]#</code></pre> </h1> <p class="md-end-block md-p"><span class="md-plain">在熟悉了容器数据卷的功能后，我们再来看下数据卷的挂载，数据卷挂载有多种方式，上面我们使用是其中一种方式：指定路径挂载。其实还有其他挂载方式，不同场景可使用不同方式的挂载，可根据自身需要选择。</span></p> <h2 class="md-end-block md-heading"><span class="md-pair-s"><strong><span class="md-plain">匿名挂载</span></strong></span></h2> <p class="md-end-block md-p"><span class="md-plain">-v 后面直接跟容器内的路径</span></p> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -d -v /etc/nginx  --name nginx001 nginx</code></span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>[root@hadoop101 ~]# docker inspect nginx001 ## 这里只列出挂载信息，将容器内的路径/etc/nginx挂载到宿主机/var/lib/docker/volumes下 "Mounts": [  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Type": "volume",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Name": "cc9ff269b7ad67fab8866e7a446009207d2a3af24395003a8cb75f3981022eec",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Source": "/var/lib/docker/volumes/cc9ff269b7ad67fab8866e7a446009207d2a3af24395003a8cb75f3981022eec/_data",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Destination": "/etc/nginx",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Driver": "local",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Mode": "",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"RW": true,  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Propagation": ""  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  }  &nbsp; &nbsp; &nbsp;  ],</code></pre> <h2 class="md-end-block md-heading"><span class="md-pair-s"><strong><span class="md-plain">具名挂载</span></strong></span></h2> <p class="md-end-block md-p"><span class="md-plain">-v 数据卷名称:容器内路径</span></p> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -d -v zhangbao_nginx:/etc/nginx  --name nginx002 nginx</code></span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code> [root@hadoop101 ~]# docker volume ls DRIVER &nbsp;  VOLUME NAME local &nbsp; &nbsp; 511511317ef0256d2d1570104e11a6ce897ba387267fbeec0192326dd6156067 local &nbsp; &nbsp; cc9ff269b7ad67fab8866e7a446009207d2a3af24395003a8cb75f3981022eec local &nbsp; &nbsp; e5303012839aa87faef7719a0407f690a9da8af1fcf6dfc2ef51cf20a5aa441f local &nbsp; &nbsp; zhangbao_nginx [root@hadoop101 ~]# docker volume inspect zhangbao_nginx [  &nbsp;  {  &nbsp; &nbsp; &nbsp; &nbsp;"CreatedAt": "2022-03-21T23:09:43+08:00",  &nbsp; &nbsp; &nbsp; &nbsp;"Driver": "local",  &nbsp; &nbsp; &nbsp; &nbsp;"Labels": null,  &nbsp; &nbsp; &nbsp; &nbsp;"Mountpoint": "/var/lib/docker/volumes/zhangbao_nginx/_data",  &nbsp; &nbsp; &nbsp; &nbsp;"Name": "zhangbao_nginx",  &nbsp; &nbsp; &nbsp; &nbsp;"Options": null,  &nbsp; &nbsp; &nbsp; &nbsp;"Scope": "local"  &nbsp;  } ]</code></pre> <p class="md-end-block md-p"><span class="md-plain">上面就是匿名挂载和具名挂载了，我们经常用的还有一种就是指定路径</span></p> <h2 class="md-end-block md-heading"><span class="md-pair-s"><strong><span class="md-plain">指定路径挂载</span></strong></span></h2> <p class="md-end-block md-p"><span class="md-plain">-v 宿主机路径:容器路径</span></p> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -d -v /etc/nginx:/etc/nginx  --name nginx003 nginx</code></span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>[root@hadoop101 ~]# docker inspect nginx003 "Mounts": [  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Type": "bind",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Source": "/etc/nginx",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Destination": "/etc/nginx",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Mode": "",  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"RW": true,  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"Propagation": "rprivate"  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  }  &nbsp; &nbsp; &nbsp;  ],</code></pre> <p class="md-end-block md-p"> </h1> <h2 class="md-end-block md-heading"><span class="md-plain">portainer</span></h2> <p class="md-end-block md-p"><span class="md-plain">一个提供web页面的Docker管理工具，命令如下：</span></p> <p class="md-end-block md-p"><span class="md-pair-s" spellcheck="false"><code>docker run -d -p 8088:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer</code></span></p> <p class="md-end-block md-p"><span class="md-plain">访问：</span><span class="md-link md-pair-s" spellcheck="false"><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://192.168.88.71:8088"  rel="nofollow">http://192.168.88.71:8088</a></span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/ed3374abf813312fc9cc647f78ecbe72.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/ed3374abf813312fc9cc647f78ecbe72.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"><span class="md-plain">添加超管账号：admin / 88888888</span></p> <p class="md-end-block md-p"><span class="md-plain">然后选择本地的docker环境</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/ec57504c68b4dac26b737595412148be.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/ec57504c68b4dac26b737595412148be.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"><span class="md-plain">连接之后，我们可以查看有7个镜像，然后点击进去</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/253ef69617683fa4559102c6efc31deb.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/253ef69617683fa4559102c6efc31deb.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"><span class="md-plain">可以看到本地环境有7个镜像，13个容器，10个数据卷。</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/c6c96f9efce7427a772272f18e0dd010.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/c6c96f9efce7427a772272f18e0dd010.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"> <p class="md-end-block md-p"><span class="md-plain">查看有哪7个镜像，可以看到有我们之前测试使用的镜像，包括我们自己提交的一个修改后的新镜像</span><span class="md-pair-s"><strong><span class="md-plain">tomcat001:1.0</span></strong></span><span class="md-plain">。</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/9779f38683665d18dfef686e317fb8e3.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/9779f38683665d18dfef686e317fb8e3.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"> <p class="md-end-block md-p"><span class="md-plain">数据卷列表，包括我们创建的匿名数据卷，以及具名数据卷。</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/04a47750267e4f16914e73ebf29faeb3.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/04a47750267e4f16914e73ebf29faeb3.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"> <h2 class="md-end-block md-heading"><span class="md-plain">lazydocker</span></h2> <p class="md-end-block md-p"><span class="md-plain">一个基于终端的Docker可视化查询工具。</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/5b9894a4e3f2553de40173388345cdd5.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/5b9894a4e3f2553de40173388345cdd5.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"><span class="md-plain">github：</span><span class="md-link md-pair-s" spellcheck="false"><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/jesseduffield/lazydocker"  rel="nofollow">https://github.com/jesseduffield/lazydocker</a></span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>docker run --rm -it -v \ /var/run/docker.sock:/var/run/docker.sock \ -v /.config/lazydocker:/.config/jesseduffield/lazydocker \ lazyteam/lazydocker</code></pre> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/0a6ecdb8a535202ebcb8466cedb60747.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/0a6ecdb8a535202ebcb8466cedb60747.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"> <p class="md-end-block md-p"><span class="md-plain">鼠标和方向键都可控制查看信息框，在整个屏幕底部也有提示</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/3f124e527974716a8ee7d12efba9330d.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/3f124e527974716a8ee7d12efba9330d.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p"> <p class="md-end-block md-p"><span class="md-plain">鼠标和方向键演示</span></p> <p class="md-end-block md-p"><span class="md-image md-img-loaded" data-src="http://img.555519.xyz/uploads3/20220510/f6b8bd777889a95e6c5f9e9585b9334e.jpg" alt="Docker提交镜像-数据卷-可视化"><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/f6b8bd777889a95e6c5f9e9585b9334e.jpg" alt="Docker提交镜像-数据卷-可视化"/></span></p> <p class="md-end-block md-p md-focus"><span class="md-plain md-expand">每次查看都需要很长的命令，我们可以简化下</span></p> <pre class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell" spellcheck="false"><code>echo "alias lzd='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /.config/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker'" &gt;&gt; ~/.zshrc </code></pre> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-30335.htm">动物疫苗的正确使用方法有哪些视频 动物疫苗的正确使用方法有哪些视频讲解</a></p>
+                                        <p>下一个：<a href="/news/article-30817.htm">动物疫苗企业名单查询官网下载（动物疫苗行业排名）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-10-3-free-subscribe-node.htm" title="10月3日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址">10月3日→18.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-27983.htm" title="被猫抓了怎么确定有没有狂犬病（被猫抓怎么判断有没有事）">被猫抓了怎么确定有没有狂犬病（被猫抓怎么判断有没有事）</a></li>
+                        <li class="py-2"><a href="/news/article-21509.htm" title="北京宠爱国际动物医院地址电话号码（北京宠爱国际动物医疗机构）">北京宠爱国际动物医院地址电话号码（北京宠爱国际动物医疗机构）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-31-free-high-speed-nodes.htm" title="10月31日→22M/S|2024年最新免费节点Free Vmess订阅链接地址">10月31日→22M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-4-free-subscribe-node.htm" title="12月4日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址">12月4日→21.2M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19210.htm" title="宠物粮品牌排行前十名有哪些呢图片（宠物粮品牌排行前十名有哪些呢图片视频）">宠物粮品牌排行前十名有哪些呢图片（宠物粮品牌排行前十名有哪些呢图片视频）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-1-node-share.htm" title="11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-25-free-node-subscribe-links.htm" title="12月25日→20.1M/S|2024年最新免费节点Free Vmess订阅链接地址分享">12月25日→20.1M/S|2024年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-9-free-node-subscribe.htm" title="12月9日→20.3M/S|2024年最新免费节点Free Vmess订阅链接地址">12月9日→20.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-15-node-share-links.htm" title="10月15日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址">10月15日→21.3M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">75</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

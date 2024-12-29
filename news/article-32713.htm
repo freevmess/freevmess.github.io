@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-32713.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义指令（拖拽）</title>
+        <meta name="description" content="directives: {     go: {       inserted(el) {         //给el设置绝对定位         el.style.position = 'absolu" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                                                <a href="/">
+                            <span>Free Vmess</span>
+                        </a>
+                                            </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">自定义指令（拖拽）</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <pre><code class="prism language-javascript">  directives<span class="token punctuation">:</span> <span class="token punctuation">{<!-- --></span>     go<span class="token punctuation">:</span> <span class="token punctuation">{<!-- --></span>       <span class="token function">inserted</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token comment">//给el设置绝对定位</span>         el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>position <span class="token operator">=</span> <span class="token string">'absolute'</span>         <span class="token comment">//给el添加鼠标按下的事件</span>         el<span class="token punctuation">.</span><span class="token function-variable function">onmousedown</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>           <span class="token comment">//用视口的位置减去相对于父元素的位置得到一个距离差</span>           <span class="token keyword">var</span> sx <span class="token operator">=</span> event<span class="token punctuation">.</span>clientX <span class="token operator">-</span> el<span class="token punctuation">.</span>offsetLeft           <span class="token keyword">var</span> sy <span class="token operator">=</span> event<span class="token punctuation">.</span>clientY <span class="token operator">-</span> el<span class="token punctuation">.</span>offsetTop           <span class="token comment">//当鼠标按下移动的时候求出一个新的位置</span>           document<span class="token punctuation">.</span><span class="token function-variable function">onmousemove</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             <span class="token comment">//获取大盒子的宽度和高度</span>             <span class="token keyword">var</span> bigW <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>offsetWidth             <span class="token keyword">var</span> elW <span class="token operator">=</span> el<span class="token punctuation">.</span>offsetWidth             <span class="token keyword">var</span> bigH <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>offsetHeight             <span class="token keyword">var</span> elH <span class="token operator">=</span> el<span class="token punctuation">.</span>offsetHeight             <span class="token keyword">var</span> x <span class="token operator">=</span> event<span class="token punctuation">.</span>clientX <span class="token operator">-</span> sx             <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;</span> bigW <span class="token operator">-</span> elW<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>               x <span class="token operator">=</span> bigW <span class="token operator">-</span> elW             <span class="token punctuation">}</span>             <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>               x <span class="token operator">=</span> <span class="token number">0</span>             <span class="token punctuation">}</span>             <span class="token keyword">var</span> y <span class="token operator">=</span> event<span class="token punctuation">.</span>clientY <span class="token operator">-</span> sy             <span class="token keyword">if</span> <span class="token punctuation">(</span>y <span class="token operator">&gt;</span> bigH <span class="token operator">-</span> elH<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>               y <span class="token operator">=</span> bigH <span class="token operator">-</span> elH             <span class="token punctuation">}</span>             <span class="token keyword">if</span> <span class="token punctuation">(</span>y <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>               y <span class="token operator">=</span> <span class="token number">0</span>             <span class="token punctuation">}</span>             <span class="token comment">//给el赋值</span>             el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token string">'px'</span>             el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> y <span class="token operator">+</span> <span class="token string">'px'</span>           <span class="token punctuation">}</span>           <span class="token comment">//当鼠标弹起的时候移除move事件</span>           el<span class="token punctuation">.</span><span class="token function-variable function">onmouseup</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             document<span class="token punctuation">.</span>onmousemove <span class="token operator">=</span> <span class="token keyword">null</span>           <span class="token punctuation">}</span>         <span class="token punctuation">}</span>       <span class="token punctuation">}</span><span class="token punctuation">,</span>     <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">}</span> </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-32232.htm">动物疫苗监管部门投诉电话 动物疫苗监管部门投诉电话是多少</a></p>
+                                        <p>下一个：<a href="/news/article-32714.htm">解决windows下WslRegisterDistribution failed with error: 0x80070050的问题</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-21044.htm" title="动物医院实践心得5000字怎么写的呀视频（动物医院实践心得5000字怎么写的呀视频教程）">动物医院实践心得5000字怎么写的呀视频（动物医院实践心得5000字怎么写的呀视频教程）</a></li>
+                        <li class="py-2"><a href="/news/article-21952.htm" title="Vue +Vant 实现顶部搜索栏">Vue +Vant 实现顶部搜索栏</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-24-node-share.htm" title="12月24日→22M/S|2024年最新免费节点Free Vmess订阅链接地址分享">12月24日→22M/S|2024年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-28444.htm" title="云南农大动物医院哪个医生好些（云南农大动物医院怎么样）">云南农大动物医院哪个医生好些（云南农大动物医院怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-12-free-subscribe-node.htm" title="11月12日→18M/S|2024年最新免费节点Free Vmess订阅链接地址">11月12日→18M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19210.htm" title="宠物粮品牌排行前十名有哪些呢图片（宠物粮品牌排行前十名有哪些呢图片视频）">宠物粮品牌排行前十名有哪些呢图片（宠物粮品牌排行前十名有哪些呢图片视频）</a></li>
+                        <li class="py-2"><a href="/news/article-24727.htm" title="2022公务员国考报名条件（2022公务员国考报名条件要求）">2022公务员国考报名条件（2022公务员国考报名条件要求）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-1-node-share.htm" title="11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26137.htm" title="动物疫苗的种类和制备原理是什么意思（动物疫苗制作流程）">动物疫苗的种类和制备原理是什么意思（动物疫苗制作流程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-23-free-high-speed-nodes.htm" title="12月23日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址分享">12月23日→22.3M/S|2024年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

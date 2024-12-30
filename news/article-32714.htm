@@ -80,6 +80,7 @@
                   				  				  				<p>最近升级了老电脑的windows10的系统，发现wsl2里面安装的ubuntu20.04不能在windows terminal正常启动了（我之前是把ubuntu20.04作为默认启动终端的。）</p> <h2 id="涉及报错">涉及报错：</h2> <p>WslRegisterDistribution failed with error: 0x80070050</p> <h2 id="我的思考">我的思考：</h2> <p>报错是说wsl的distribution注册不了，所以需要在注册表里面编辑distribution相关配置项来解决问题。</p> <h2 id="解决办法">解决办法：</h2> <pre><code>Please backup (using the steps I mention in my previous answer) before trying this. wsl --shutdown&nbsp;(from PowerShell or CMD) In Windows, run the Registry Editor Find&nbsp;\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss Find the key in there that has&nbsp;DistributionName&nbsp;of&nbsp;Ubuntu20.04LTS. Change the&nbsp;Ubuntu20.04LTS&nbsp;to&nbsp;Ubuntu-20.04. In theory, that may fix the problem by changing the distribution name back to what it should be.</code></pre> <p>按照这个步骤能顺利解决问题，最终能在windows terminal里面成功运行ubuntu20.04.看来windows10的注册表有自己的一套<strong>命名规范</strong>，大家只能去follow它的要求。</p> <p>参考了很多资料，有的说是dns的问题，有的是说虚拟机配置的问题，其实都是文不对题，没有找到根本原因，记录这篇文章也是想给在苦苦google+bing解决办法的同学节约一点时间，所有问题最终都要回到报错信息本身去找突破。说的distribution那么一定要往distribution的register相关配置去想。当然能早点脱离windows是最好的，这样会少一些折腾环境的事儿。</p> <p><strong>毕竟时间真的宝贵，用在刀刃上吧。</strong><br /> 参考资料<br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://askubuntu.com/questions/1401830/wsl-not-working-after-update-from-microsoft-store"  target="_blank" rel="nofollow">https://askubuntu.com/questions/1401830/wsl-not-working-after-update-from-microsoft-store</a></p> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-32713.htm">自定义指令（拖拽）</a></p>
+                                        <p>下一个：<a href="/news/article-33180.htm">动物医院故事英文版 动物医院故事英文版视频</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -89,16 +90,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-12-20-free-high-speed-nodes.htm" title="12月20日→21.1M/S|2024年最新免费节点Free Vmess订阅链接地址">12月20日→21.1M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-20-node-share-links.htm" title="11月20日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址">11月20日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-12-free-node-subscribe.htm" title="10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址">10月12日→22.5M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-1-node-share.htm" title="11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月1日→20.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-32714.htm" title="解决windows下WslRegisterDistribution failed with error: 0x80070050的问题">解决windows下WslRegisterDistribution failed with error: 0x80070050的问题</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-26-free-node-subscribe-links.htm" title="11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月26日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-5-free-subscribe-node.htm" title="12月5日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月5日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-28-free-subscribe-node.htm" title="12月28日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址分享">12月28日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-1-free-subscribe-node.htm" title="12月1日→22M/S|2024年最新免费节点Free Vmess订阅链接地址">12月1日→22M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-19670.htm" title="小猫咪打三针疫苗的时间间隔（猫咪打三针疫苗需要多久）">小猫咪打三针疫苗的时间间隔（猫咪打三针疫苗需要多久）</a></li>
+                        <li class="py-2"><a href="/news/article-32713.htm" title="自定义指令（拖拽）">自定义指令（拖拽）</a></li>
+                        <li class="py-2"><a href="/news/article-26587.htm" title="益虫有哪些（秧田的短命益虫，寿命仅3个月）">益虫有哪些（秧田的短命益虫，寿命仅3个月）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-7-free-node-subscribe.htm" title="11月7日→18.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月7日→18.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-27-node-share-links.htm" title="9月27日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址">9月27日→22.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26586.htm" title="动物疫苗价格表最新图片高清大全视频（动物疫苗的正确使用方法）">动物疫苗价格表最新图片高清大全视频（动物疫苗的正确使用方法）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-5-node-share.htm" title="10月5日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址">10月5日→18.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-high-speed-nodes.htm" title="11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址">11月27日→18.8M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-16-free-subscribe-node.htm" title="12月16日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月16日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-31223.htm" title="宠物领养系统毕业论文怎么写（宠物领养系统的开题报告）">宠物领养系统毕业论文怎么写（宠物领养系统的开题报告）</a></li>
+                        <li class="py-2"><a href="/news/article-18782.htm" title="IDEA中配置maven环境">IDEA中配置maven环境</a></li>
                     </ul>
     </div>
 </div>
@@ -110,7 +111,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>

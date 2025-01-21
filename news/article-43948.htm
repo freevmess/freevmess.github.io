@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-43948.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用Pandas 处理大数据的3种超级方法</title>
+        <meta name="description" content="原文链接：3 simple ways to handle large data with Pandas 作者 | George Seif 译者 | jojoa  易上手， 文档丰富的Pandas 已经" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-43948.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="用Pandas 处理大数据的3种超级方法" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/bcb85f1d7e8540ea02477f15e26345fc.webp" />
+        <meta property="og:release_date" content="2025-01-21T09:50:08" />
+    <meta property="og:updated_time" content="2025-01-21T09:50:08" />
+        <meta property="og:description" content="原文链接：3 simple ways to handle large data with Pandas 作者 | George Seif 译者 | jojoa  易上手， 文档丰富的Pandas 已经" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="用Pandas 处理大数据的3种超级方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                                                <a href="/">
+                            <span>Free Vmess</span>
+                        </a>
+                                            </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">用Pandas 处理大数据的3种超级方法</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <blockquote> <p>原文链接：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://towardsdatascience.com/3-simple-ways-to-handle-large-data-with-pandas-d9164a3c02c1"  rel="nofollow">3 simple ways to handle large data with<br /> Pandas</a><br /> 作者 | George Seif<br /> 译者 | jojoa</p> </blockquote> <p>易上手， 文档丰富的Pandas 已经成为时下最火的数据处理库。此外，Pandas数据处理能力也一流。</p> <p>其实无论你使用什么库，大量的数据处理起来往往回遇到新的挑战。<br /> 数据处理时，往往会遇到没有足够内存（RAM）这个硬件问题。 企业往往需要能够存够数百， 乃至数千 的GB 数据。<br /> 即便你的计算机恰好有足够的内存来存储这些数据， 但是读取数据到硬盘依旧非常耗时。<br /> 别担心！ Pandas 数据库会帮我们摆脱这种困境。 这篇文章包含3种方法来减少数据大小，并且加快数据读取速度。 我用这些方法，把超过100GB 的数据， 压缩到了64GB 甚至32GB 的内存大小。</p> <p>快来看看这三个妙招吧。</p> <p><strong>数据分块</strong></p> <p>csv 格式是一种易储存， 易更改并且用户易读取的格式。 pandas 有read_csv ()方法来上传数据，存储为CSV 格式。当遇到CSV 文件过大，导致内存不足的问题该怎么办呢？试试强大的pandas 工具吧！我们先把整个文件拆分成小块。这里，我们把拆分的小块称为chunk。</p> <p>一个chunk 就是我们数据的一个小组。 Chunk 的大小主要依据我们内存的大小，自行决定。</p> <p>过程如下：</p> <p>1.读取一块数据。<br /> 2.分析数据。<br /> 3.保存该块数据的分析结果。<br /> 4.重复1-3步骤，直到所有chunk 分析完毕。<br /> 5.把所有的chunk 合并在一起。</p> <p>我们可以通过read_csv()方法Chunksize来完成上述步骤。 Chunksize是指pandas 一次能读取到多少行csv文件。这个当然也是建立在RAM 内存容量的基础上。<br /> 假如我们认为数据呈现高斯分布时， 我们可以在一个chunk 上， 进行数据处理和视觉化， 这样会提高准确率。</p> <p>当数据稍微复杂时， 例如呈现泊松分布时， 我们最好能一块块筛选，然后把每一小块整合在一起。 然后再进行分析。很多时候， 我们往往删除太多的不相关列，或者删除有值行。 我们可以在每个chunk 上，删除不相关数据， 然后再把数据整合在一起，最后再进行数据分析。</p> <p>代码如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20221229/67aa4ce388ac221d81a09262e2a30b11.jpg" alt="用Pandas 处理大数据的3种超级方法"><br /><strong>删除数据</strong></p> <p>有时候， 我们一眼就能看到需要分析的列。事实上， 通常名字，账号等列，我们是不做分析的。</p> <p>读取数据前， 先跳过这些无用的列，可以帮我们节省很多内存。 Pandas 可以允许我们选择想要读取的列。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20221229/dbfceb383ccea32833656ce0670ba54e.jpg" alt="用Pandas 处理大数据的3种超级方法"><br /> 把包含无用信息的列删除掉， 往往给我们节省了大量内存。</p> <p>此外，我们还可以把有缺失值的行，或者是包含“NA” 的行删除掉。 通过dropna()方法可以实现：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20221229/7b2a9041f48fb90aa413095ab8f11471.jpg" alt="用Pandas 处理大数据的3种超级方法"><br /> 有几个非常有用的参数，可以传给dropna():</p> <ul> <li>how: 可选项：“any”(该行的任意一列如果出现”NA”， 删除该行)</li> <li>“all” (只有某行所有数数据全部是”NA” 时才删除)</li> <li>thresh: 设定某行最多包含多少个NA 时，才进行删除</li> <li>subset: 选定某个子集，进行NA 查找</li> </ul> <p>可以通过这些参数， 尤其是thresh 和 subset 两个参数可以决定某行是否被删除掉。</p> <p>Pandas 在读取信息的时候，无法删除列。但是我们可以在每个chunk 上，进行上述操作。</p> <p><strong>为列设定不同的数据类型</strong></p> <p>数据科学家新手往往不会对数据类型考虑太多。 当处理数据越来越多时， 就非常有必要考虑数据类型了。</p> <p>行业常用的解决方法是从数据文件中，读取数据， 然后一列列设置数据类型。 但当数据量非常大时， 我们往往担心内存空间不够用。</p> <p>在CSV 文件中，例如某列是浮点数， 它往往会占据更多的存储空间。 例如， 当我们下载数据来预测股票信息时， 价格往往以32位浮点数形式存储。</p> <p>但是，我们真的需要32位浮点数码？ 大多数情况下， 股票价格以小数点后保留两位数据进行交易。 即便我们想看到更精确的数据， 16位浮点数已经足够了。</p> <p>我们往往会在读取数据的时候， 设置数据类型，而不是保留数据原类型。 那样的话，会浪费掉部分内存。</p> <p>通过read_csv() 中设置dtype参数来完成数据类型设置。还可以设置字典类型，设置该列是键， 设置某列是字典的值。</p> <p>请看下面的pandas 例子：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20221229/b12f77d9f21e44269b44872632122a96.jpg" alt="用Pandas 处理大数据的3种超级方法"><br /> 文章到这里结束了！ 希望上述三个方法可以帮你节省时间和内存。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-43457.htm">动物疫苗价格一览表图片高清大全集 动物疫苗价格一览表图片高清大全集下载</a></p>
+                                        <p>下一个：<a href="/news/article-43949.htm">长期养猫人容易得啥病（猫给人传染的8种病）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-5-free-node-subscribe.htm" title="1月5日→20.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月5日→20.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-37513.htm" title="动物疫苗接种方法有几种 动物疫苗接种方法有几种类型">动物疫苗接种方法有几种 动物疫苗接种方法有几种类型</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-19-node-share.htm" title="10月19日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址">10月19日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-21-free-high-speed-nodes.htm" title="12月21日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址分享">12月21日→20.5M/S|2024年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-38978.htm" title="Android 弹窗设计规范">Android 弹窗设计规范</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-19-free-node-subscribe-links.htm" title="11月19日→18.1M/S|2024年最新免费节点Free Vmess订阅链接地址">11月19日→18.1M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-8-free-node-subscribe-links.htm" title="10月8日→22.4M/S|2024年最新免费节点Free Vmess订阅链接地址">10月8日→22.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-39496.htm" title="猫粮利润空间大吗（猫粮挣钱吗）">猫粮利润空间大吗（猫粮挣钱吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-node-subscribe-links.htm" title="11月9日→18.6M/S|2024年最新免费节点Free Vmess订阅链接地址">11月9日→18.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-29-free-subscribe-node.htm" title="11月29日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月29日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

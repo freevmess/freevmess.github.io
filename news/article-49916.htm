@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-49916.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局实现上下固定高度，中间自适应布局</title>
+        <meta name="description" content="flex布局实现上下固定高度，中间自适应布局 flex布局在实际开发中越来越常用，实现左右宽度或者上下高度固定，中间自适应的布局的实际需求也很常见。实现起来也很简单： &lt;!DOCTYPE htm" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-49916.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="flex布局实现上下固定高度，中间自适应布局" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/6d140d759856e2a69bea5b2ae7f5e397.webp" />
+        <meta property="og:release_date" content="2025-02-02T09:27:13" />
+    <meta property="og:updated_time" content="2025-02-02T09:27:13" />
+        <meta property="og:description" content="flex布局实现上下固定高度，中间自适应布局 flex布局在实际开发中越来越常用，实现左右宽度或者上下高度固定，中间自适应的布局的实际需求也很常见。实现起来也很简单： &lt;!DOCTYPE htm" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="flex布局实现上下固定高度，中间自适应布局">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                                                <a href="/">
+                            <span>Free Vmess</span>
+                        </a>
+                                            </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">flex布局实现上下固定高度，中间自适应布局</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atelier-sulphurpool-light"> <h2><a id="flex_0" rel="nofollow"></a>flex布局实现上下固定高度，中间自适应布局</h2> <p>flex布局在实际开发中越来越常用，实现左右宽度或者上下高度固定，中间自适应的布局的实际需求也很常见。实现起来也很简单：</p> <pre><code>&lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt; 	&lt;meta charset="utf-8"&gt; 	&lt;title&gt;flex&lt;/title&gt; 	&lt;style type="text/css"&gt; 		body{ 			padding: 0; 			margin: 0; 		} 		.container{ 			height: calc(100vh - 50px); 			background-color: black; 			display: flex; 			flex-direction: column; 		} 		.header{ 			width: 100%; 			height: 100px; 			background-color: #e77c8e; 		} 		.main{ 			width: 100%; 			flex: 1; 			background-color: #2bae85; 		} 		.footer{ 			width: 100%; 			height: 100px; 			background-color: #7a7374; 		} 	&lt;/style&gt; &lt;/head&gt; &lt;body&gt; 	&lt;div class="container"&gt; 		&lt;div class="header"&gt;header&lt;/div&gt; 		&lt;div class="main"&gt;main&lt;/div&gt; 		&lt;div class="footer"&gt;footer&lt;/div&gt; 	&lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</code></pre> <p>注意点：<br /> 1、container父容器的高度必须是一个可以计算出来的固定高度。<br /> 2、实际开发中因为中间部分内容层级太多，甚至嵌套表格等，使得自适应无法生效。这时候要看一下中间自适应部分的高度是否从父容器继承过来，可以试给table高度不对的那一层设置 height:100%; 或者 height:inherit; 试一下能否生效。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-49915.htm">springboot全局时间格式化</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-48318.htm" title="宠物领养协议书范本大全最新下载（宠物领养协议免费下载）">宠物领养协议书范本大全最新下载（宠物领养协议免费下载）</a></li>
+                        <li class="py-2"><a href="/news/article-26137.htm" title="动物疫苗的种类和制备原理是什么意思（动物疫苗制作流程）">动物疫苗的种类和制备原理是什么意思（动物疫苗制作流程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-5-free-node-subscribe.htm" title="1月5日→20.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月5日→20.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-22-free-node-subscribe.htm" title="1月22日→19M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月22日→19M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-39496.htm" title="猫粮利润空间大吗（猫粮挣钱吗）">猫粮利润空间大吗（猫粮挣钱吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-node-share-links.htm" title="1月18日→22.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月18日→22.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-24-node-share-links.htm" title="10月24日→20.9M/S|2024年最新免费节点Free Vmess订阅链接地址">10月24日→20.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-45925.htm" title="宠物饲料业务员好做吗（宠物饲料行业）">宠物饲料业务员好做吗（宠物饲料行业）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-2-node-share.htm" title="2月2日→22.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享">2月2日→22.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-17-node-share.htm" title="12月17日→22.9M/S|2024年最新免费节点Free Vmess订阅链接地址">12月17日→22.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

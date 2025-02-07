@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-51989.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React路由传参常见的几种方式</title>
+        <meta name="description" content="React路由传参   解释：路由传参完成的是组件之间的数据传递（组件传值）  1）、params  路由配置： &lt;Route path='/Inbox/:id' component={Inbo" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-51989.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="React路由传参常见的几种方式" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/3b1d55388dd4ced9ffaea95be04120bc.webp" />
+        <meta property="og:release_date" content="2025-02-06T05:28:49" />
+    <meta property="og:updated_time" content="2025-02-06T05:28:49" />
+        <meta property="og:description" content="React路由传参   解释：路由传参完成的是组件之间的数据传递（组件传值）  1）、params  路由配置： &lt;Route path='/Inbox/:id' component={Inbo" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="React路由传参常见的几种方式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">React路由传参常见的几种方式</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="React_0" rel="nofollow"></a><strong>React路由传参</strong><br /> </h2> <blockquote> <p>解释：路由传参完成的是组件之间的数据传递（组件传值）</p> </blockquote> <p><strong>1）、params</strong></p> <p> <strong><strong>路由配置：</strong></strong></p> <pre><code class="prism language-bash"><span class="token operator">&lt;</span>Route <span class="token assign-left variable">path</span><span class="token operator">=</span><span class="token string">'/Inbox/:id'</span> <span class="token assign-left variable">component</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span>Inbox<span class="token punctuation">}</span> /<span class="token operator">&gt;</span> </code></pre> <p> <strong>路由跳转（传值）：</strong></p> <pre><code class="prism language-bash">声明式导航： <span class="token operator">&lt;</span>NavLink <span class="token assign-left variable">to</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token string">'/Inbox/01008'</span><span class="token punctuation">}</span> <span class="token operator">&gt;</span>铅笔<span class="token operator">&lt;</span>/NavLink<span class="token operator">&gt;</span> 编程式导航： this.props.history.push<span class="token punctuation">(</span> <span class="token string">'/Inbox/'</span>+<span class="token string">'01008'</span> <span class="token punctuation">)</span> </code></pre> <p> <strong>取值：</strong></p> <pre><code class="prism language-bash">this.props.match.params.id  </code></pre> <blockquote> <p>优势 ： 刷新，参数依然存在</p> <p>缺点 ： 只能传字符串，并且，如果传的值太多的话，url会变得长而丑陋。</p> </blockquote> <p><strong>2）、query</strong></p> <p><strong>路由配置：</strong></p> <p> 不用改变路由配置。</p> <pre><code class="prism language-bash"><span class="token operator">&lt;</span>Route <span class="token assign-left variable">path</span><span class="token operator">=</span><span class="token string">'/Inbox'</span> <span class="token assign-left variable">component</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span>Inbox<span class="token punctuation">}</span> /<span class="token operator">&gt;</span> </code></pre> <p> <strong>路由跳转（传值）：</strong></p> <pre><code class="prism language-bash">声明式导航： <span class="token operator">&lt;</span>Link <span class="token assign-left variable">to</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>pathname:<span class="token string">'/Inbox'</span>,query:<span class="token punctuation">{<!-- --></span>id:<span class="token string">'01009'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">&gt;</span>铅笔<span class="token operator">&lt;</span>/Link<span class="token operator">&gt;</span> 编程式导航： this.props.history.push<span class="token punctuation">(</span> <span class="token punctuation">{<!-- --></span>pathname:<span class="token string">'/Inbox'</span>,query:<span class="token punctuation">{<!-- --></span>id:<span class="token string">'01009'</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token punctuation">)</span> </code></pre> <p><strong>取值：</strong></p> <pre><code class="prism language-bash">this.props.location.query.id </code></pre> <blockquote> <p>优势：传参优雅，传递参数可传对象；</p> <p>缺点：刷新地址栏，参数丢失（不管是hash方式，还是Browser模式都会丢失参数）</p> </blockquote> <p><strong>3）、state</strong></p> <p> 同query差不多，只是属性不一样，而且state传的参数是加密的，query传的参数是公开的，只需要把query改为state即可。</p> <p><strong>路由配置：</strong></p> <p> 不用改变路由配置。</p> <pre><code class="prism language-bash"><span class="token operator">&lt;</span>Route <span class="token assign-left variable">path</span><span class="token operator">=</span><span class="token string">'/Inbox'</span> <span class="token assign-left variable">component</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span>Inbox<span class="token punctuation">}</span> /<span class="token operator">&gt;</span> </code></pre> <p> <strong>路由跳转（传值）：</strong></p> <pre><code class="prism language-bash">声明式导航 <span class="token operator">&lt;</span>Link <span class="token assign-left variable">to</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>pathname:<span class="token string">'/Inbox'</span>,state:<span class="token punctuation">{<!-- --></span>id:<span class="token string">'01009'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">&gt;</span>铅笔<span class="token operator">&lt;</span>/Link<span class="token operator">&gt;</span> 编程式导航 this.props.history.push<span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>pathname:<span class="token string">'/Inbox'</span>,state:<span class="token punctuation">{<!-- --></span>id:<span class="token string">"01"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> <p><strong>取值：</strong></p> <pre><code class="prism language-bash">this.props.location.state.id </code></pre> <blockquote> <p>优势：传参优雅，传递参数可传对象</p> <p>缺点：刷新地址栏，（hash方式会丢失参数，Browser模式不会丢失参数）</p> </blockquote> <p><strong>4）、search</strong></p> <p><strong>路由配置：</strong></p> <p> 不用改变路由配置。</p> <pre><code class="prism language-bash"><span class="token operator">&lt;</span>Route <span class="token assign-left variable">path</span><span class="token operator">=</span><span class="token string">'/Inbox'</span> <span class="token assign-left variable">component</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span>Inbox<span class="token punctuation">}</span> /<span class="token operator">&gt;</span> </code></pre> <p> <strong>传值：</strong></p> <pre><code class="prism language-bash">声明式导航 <span class="token operator">&lt;</span>Link <span class="token assign-left variable">to</span><span class="token operator">=</span><span class="token string">'/Inbox?a=1&amp;b=2'</span> <span class="token operator">&gt;</span>铅笔<span class="token operator">&lt;</span>/Link<span class="token operator">&gt;</span> 编程式导航 this.props.history.push<span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>pathname:<span class="token string">'/Inbox'</span>,search:<span class="token string">'?a=1&amp;b=2'</span><span class="token punctuation">}</span><span class="token punctuation">)</span> </code></pre> <p><strong>取值：</strong></p> <pre><code class="prism language-bash">this.props.location.search </code></pre> <blockquote> <p>用location.search所获取的是查询字符串，所以，还需要进一步的解析，自己自行解析，也可以使用第三方模块：qs，或者nodejs里的query-string</p> </blockquote></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-51475.htm">动物医院实践心得5000字左右作文三年级下册（动物医院实训总结）</a></p>
+                                        <p>下一个：<a href="/news/article-51990.htm">小型狗粮加工设备视频讲解教程（小型狗粮加工设备视频讲解教程全集）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-5-free-node-subscribe.htm" title="11月5日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址">11月5日→21.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26587.htm" title="益虫有哪些（秧田的短命益虫，寿命仅3个月）">益虫有哪些（秧田的短命益虫，寿命仅3个月）</a></li>
+                        <li class="py-2"><a href="/news/article-35158.htm" title="宠物美容月薪多少（宠物美容工资高吗）">宠物美容月薪多少（宠物美容工资高吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-18-free-node-subscribe-links.htm" title="12月18日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址">12月18日→21.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-node-share.htm" title="12月15日→21.6M/S|2024年最新免费节点Free Vmess订阅链接地址">12月15日→21.6M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-node-share.htm" title="12月14日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址">12月14日→18.9M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-13-free-subscribe-node.htm" title="1月13日→21.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月13日→21.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-29383.htm" title="合肥在哪可以领养宠物（合肥领养宠物的地方）">合肥在哪可以领养宠物（合肥领养宠物的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-18782.htm" title="IDEA中配置maven环境">IDEA中配置maven环境</a></li>
+                        <li class="py-2"><a href="/news/article-50432.htm" title="猫三联一共几针,间隔多久打第二针好（猫三联每针间隔多久打一次）">猫三联一共几针,间隔多久打第二针好（猫三联每针间隔多久打一次）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

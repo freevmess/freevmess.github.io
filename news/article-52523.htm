@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-52523.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>docker-compose部署Yapi的方法_docker</title>
+        <meta name="description" content="1 安装docker  sudo yum install -y yum-utils device-mapper-persistent-data lvm2  sudo yum-config-manage" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-52523.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="docker-compose部署Yapi的方法_docker" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/9ef49f5c57869dae00cb5efc305df9e1.webp" />
+        <meta property="og:release_date" content="2025-02-07T07:19:01" />
+    <meta property="og:updated_time" content="2025-02-07T07:19:01" />
+        <meta property="og:description" content="1 安装docker  sudo yum install -y yum-utils device-mapper-persistent-data lvm2  sudo yum-config-manage" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="docker-compose部署Yapi的方法_docker">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">docker-compose部署Yapi的方法_docker</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h3>1 安装docker</h3> <div class="ay1code"> <pre class="brush:bash;">sudo yum install -y yum-utils device-mapper-persistent-data lvm2  sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo  sudo yum install docker-ce  systemctl start docker</pre> </div> <h3>2 安装docker-compose</h3> <div class="ay1code"> <pre class="brush:bash;">curl -L https://get.daocloud.io/docker/compose/releases/download/1.29.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose  chmod +x /usr/local/bin/docker-compose</pre> </div> <h3>3 新建docker-compose.yml</h3> <blockquote> <p>vim docker-compose.yml</p> </blockquote> <div class="ay1code"> <pre class="brush:bash;">version: '3'  services:    yapi-web:      image: liuqingzheng/yapi:latest      container_name: yapi-web      ports:        - 3000:3000      environment:        - YAPI_ADMIN_ACCOUNT=123@qq.com        - YAPI_ADMIN_PASSWORD=admin        - YAPI_CLOSE_REGISTER=true        - YAPI_DB_SERVERNAME=yapi-mongo        - YAPI_DB_PORT=27017        - YAPI_DB_DATABASE=yapi        - YAPI_MAIL_ENABLE=false        - YAPI_LDAP_LOGIN_ENABLE=false        - YAPI_PLUGINS=[]      depends_on:        - yapi-mongo      links:      restart: unless-stopped    yapi-mongo:      image: mongo:latest      container_name: yapi-mongo      volumes:        - ./data/db:/data/db      expose:        - 27017</pre> </div> <h3>4 启动</h3> <div class="ay1code"> <pre class="brush:bash;">docker-compose up -d # 启动  docker-compose stop  # 停止  docker-compose rm    # 删除</pre> </div> <h3>5 访问</h3> <div class="ay1code"> <pre class="brush:plain;">http://127.0.0.1:3000/  输入邮箱：123@qq.com  输入密码：admin</pre> </div> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220424/2f3b994c86d0ebf27dbd20127875b1c4.jpg"></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-51990.htm">小型狗粮加工设备视频讲解教程（小型狗粮加工设备视频讲解教程全集）</a></p>
+                                        <p>下一个：<a href="/news/article-52524.htm">领养宠物还要押金嘛（领养宠物要钱么）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-36535.htm" title="克隆Gitee代码报错Unable to connect to gitee.com: gitee.com[0: 180.97.125.228]: errno=Unknown error">克隆Gitee代码报错Unable to connect to gitee.com: gitee.com[0: 180.97.125.228]: errno=Unknown error</a></li>
+                        <li class="py-2"><a href="/news/article-28910.htm" title="vue-cli项目添加骨架屏多种方式，自动生成骨架屏">vue-cli项目添加骨架屏多种方式，自动生成骨架屏</a></li>
+                        <li class="py-2"><a href="/news/article-21043.htm" title="动物防疫站能给人打狂犬疫苗吗要钱吗知乎（动物防疫站打针免费吗）">动物防疫站能给人打狂犬疫苗吗要钱吗知乎（动物防疫站打针免费吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-13-free-subscribe-node.htm" title="1月13日→21.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月13日→21.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-34611.htm" title="猫不打疫苗有事吗（猫不打疫苗有啥危害）">猫不打疫苗有事吗（猫不打疫苗有啥危害）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-8-free-subscribe-node.htm" title="1月8日→19M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月8日→19M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-20-free-high-speed-nodes.htm" title="12月20日→21.1M/S|2024年最新免费节点Free Vmess订阅链接地址">12月20日→21.1M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-14-free-subscribe-node.htm" title="11月14日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址">11月14日→22.7M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-39497.htm" title="丹阳有宠物收留中心吗（丹阳哪里有宠物店）">丹阳有宠物收留中心吗（丹阳哪里有宠物店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-28-free-subscribe-node.htm" title="1月28日→21.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月28日→21.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-55232.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件上传fileupload实现</title>
+        <meta name="description" content="&lt;!--上传--&gt;  &lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt; &lt;depende" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-55232.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="文件上传fileupload实现" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/53a05cf2b5f806db3f8eab6fca668bb5.webp" />
+        <meta property="og:release_date" content="2025-02-12T09:07:17" />
+    <meta property="og:updated_time" content="2025-02-12T09:07:17" />
+        <meta property="og:description" content="&lt;!--上传--&gt;  &lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt; &lt;depende" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="文件上传fileupload实现">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">文件上传fileupload实现</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <div> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#808080">&lt;!--上传--&gt; </span><span style="color:#808080"> </span><span style="color:#808080">&lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt; </span><span style="color:#e8bf6a">&lt;dependency&gt; </span><span style="color:#e8bf6a">    &lt;groupId&gt;</span>commons-io<span style="color:#e8bf6a">&lt;/groupId&gt; </span><span style="color:#e8bf6a">    &lt;artifactId&gt;</span>commons-io<span style="color:#e8bf6a">&lt;/artifactId&gt; </span><span style="color:#e8bf6a">    &lt;version&gt;</span>2.4<span style="color:#e8bf6a">&lt;/version&gt; </span><span style="color:#e8bf6a">&lt;/dependency&gt; </span><span style="color:#808080">&lt;!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload --&gt; </span><span style="color:#e8bf6a">&lt;dependency&gt; </span><span style="color:#e8bf6a">    &lt;groupId&gt;</span>commons-fileupload<span style="color:#e8bf6a">&lt;/groupId&gt; </span><span style="color:#e8bf6a">    &lt;artifactId&gt;</span>commons-fileupload<span style="color:#e8bf6a">&lt;/artifactId&gt; </span><span style="color:#e8bf6a">    &lt;version&gt;</span>1.3.1<span style="color:#e8bf6a">&lt;/version&gt; </span><span style="color:#e8bf6a">&lt;/dependency&gt; </span></pre> <p> </div> </h1> </h1> <div> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#e8bf6a">&lt;bean </span><span style="color:#bababa">id</span><span style="color:#6a8759">="multipartResolver" </span><span style="color:#6a8759">      </span><span style="color:#bababa">class</span><span style="color:#6a8759">="org.springframework.web.multipart.commons.CommonsMultipartResolver"</span><span style="color:#e8bf6a">&gt; </span><span style="color:#e8bf6a">    &lt;property </span><span style="color:#bababa">name</span><span style="color:#6a8759">="defaultEncoding" </span><span style="color:#bababa">value</span><span style="color:#6a8759">="UTF-8" </span><span style="color:#e8bf6a">/&gt; </span><span style="color:#e8bf6a">    </span><span style="color:#808080">&lt;!-- 指定所上传文件的总大小,单位字节。注意maxUploadSize属性的限制不是针对单个文件，而是所有文件的容量之和 --&gt; </span><span style="color:#808080">    </span><span style="color:#e8bf6a">&lt;property </span><span style="color:#bababa">name</span><span style="color:#6a8759">="maxUploadSize" </span><span style="color:#bababa">value</span><span style="color:#6a8759">="10240000" </span><span style="color:#e8bf6a">/&gt; </span><span style="color:#e8bf6a">&lt;/bean&gt;</span></pre> <p> </div> </h1> </h1> <div> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#e8bf6a"></span></pre> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#e8bf6a">&lt;form </span><span style="color:#bababa">action=</span><span style="color:#a5c261">"StockController/addStock.action"  </span><span style="color:#bababa">method=</span><span style="color:#a5c261">"post" </span><span style="color:#bababa">enctype=</span><span style="color:#a5c261">"multipart/form-data"</span><span style="color:#e8bf6a">&gt; </span></pre> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#e8bf6a"><span style="white-space:pre">	</span>&lt;input </span><span style="color:#bababa">type=</span><span style="color:#a5c261">"file" </span><span style="color:#bababa">name=</span><span style="color:#a5c261">"multipartFile"</span><span style="color:#e8bf6a">/&gt;&lt;br/&gt;</span></pre> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#e8bf6a"><span style="white-space:pre">	</span>&lt;input </span><span style="color:#bababa">type=</span><span style="color:#a5c261">"submit" </span><span style="color:#bababa">value=</span><span style="color:#a5c261">"添加"</span><span style="color:#e8bf6a">&gt;</span></pre> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#e8bf6a">&lt;/form&gt;</span></pre> <p> 、 </p></div> <div>   </div> <div>   </div> </h1> <div>   </div> <div> <pre style="background-color:#2b2b2b; color:#a9b7c6; font-family:'宋体'; font-size:12.6pt"><span style="color:#bbb529">@RequestMapping</span>(<span style="color:#d0d0ff">value </span>= <span style="color:#6a8759">"addStock" </span><span style="color:#cc7832">,</span><span style="color:#d0d0ff">method </span>= RequestMethod.<span style="color:#9876aa"><em>POST</em></span>)     <span style="color:#cc7832">public </span>String <span style="color:#ffc66d">addStock</span>(Stock stock<span style="color:#cc7832">, </span>MultipartFile multipartFile<span style="color:#cc7832">, </span>HttpServletRequest request) <span style="color:#cc7832">throws </span>IOException {                        System.<span style="color:#9876aa"><em>out</em></span>.println(multipartFile + <span style="color:#6a8759">"-------------------------------"</span>)<span style="color:#cc7832">; </span><span style="color:#808080">//获取文件名字 </span><span style="color:#808080">        </span>String originalFilename = multipartFile.getOriginalFilename()<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span>System.<span style="color:#9876aa"><em>out</em></span>.println(originalFilename + <span style="color:#6a8759">"++++++++++++++++++++"</span>)<span style="color:#cc7832">; </span><span style="color:#808080">//获取不会重复的毫秒数 </span><span style="color:#808080">        </span><span style="color:#cc7832">long </span>l = System.<span style="font-style:italic">currentTimeMillis</span>()<span style="color:#cc7832">; </span><span style="color:#808080">//新名字 </span><span style="color:#808080">        </span>String newName = l + originalFilename<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span>System.<span style="color:#9876aa"><em>out</em></span>.println(newName + <span style="color:#6a8759">"----------++++++"</span>)<span style="color:#cc7832">; </span><span style="color:#808080">//图片的输入流名字 </span><span style="color:#808080">        </span>InputStream inputStream = multipartFile.getInputStream()<span style="color:#cc7832">; </span><span style="color:#808080">//存在于项目中的路径 </span><span style="color:#808080">        </span>String wlPath = <span style="color:#6a8759">"E:</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">小实训1</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">xupeng20170919</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">web</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">image/" </span>+ newName<span style="color:#cc7832">; </span><span style="color:#808080">//逻辑路径，存到数据库中 </span><span style="color:#808080">        </span>String ljPath = <span style="color:#6a8759">"../image/" </span>+ newName<span style="color:#cc7832">; </span><span style="color:#808080">//临时路径 </span><span style="color:#808080">        </span>String realPath = request.getSession().getServletContext().getRealPath(<span style="color:#6a8759">"/"</span>)<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span>String lsPath = realPath + <span style="color:#6a8759">"//image//" </span>+ newName<span style="color:#cc7832">; </span><span style="color:#cc7832"> </span><span style="color:#808080">//如果没有那个文件夹就创建 </span><span style="color:#808080">        </span>File wlFile = <span style="color:#cc7832">new </span>File(<span style="color:#6a8759">"E:</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">小实训1</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">xupeng20170919</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">web</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">image"</span>)<span style="color:#cc7832">; </span><span style="color:#cc7832">        if </span>(!wlFile.exists()) {             wlFile.mkdir()<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span>}         File isFile = <span style="color:#cc7832">new </span>File(realPath + <span style="color:#6a8759">"</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">image</span><span style="color:#cc7832">\\</span><span style="color:#6a8759">"</span>)<span style="color:#cc7832">; </span><span style="color:#cc7832">        if </span>(!isFile.exists()) {             isFile.mkdir()<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span>} <span style="color:#808080">//不为空时 </span><span style="color:#808080">        </span><span style="color:#cc7832">if </span>(!multipartFile.isEmpty()) {             <span style="color:#808080">//输出流 写物理路径 </span><span style="color:#808080">            </span>FileOutputStream wlStream = <span style="color:#cc7832">new </span>FileOutputStream(wlPath)<span style="color:#cc7832">; </span><span style="color:#cc7832">            </span><span style="color:#808080">//输出流 写临时路径 </span><span style="color:#808080">            </span>FileOutputStream lsStream = <span style="color:#cc7832">new </span>FileOutputStream(lsPath)<span style="color:#cc7832">; </span><span style="color:#cc7832">            int </span>len = <span style="color:#6897bb">0</span><span style="color:#cc7832">; </span><span style="color:#cc7832">            while </span>((len = inputStream.read()) != -<span style="color:#6897bb">1</span>) {                 wlStream.write(len)<span style="color:#cc7832">;</span><span style="color:#808080">//写入 </span><span style="color:#808080">                </span>lsStream.write(len)<span style="color:#cc7832">; </span><span style="color:#cc7832"> </span><span style="color:#cc7832">            </span>}             wlStream.flush()<span style="color:#cc7832">; </span><span style="color:#cc7832">            </span>lsStream.flush()<span style="color:#cc7832">; </span><span style="color:#cc7832"> </span><span style="color:#cc7832">            </span>wlStream.close()<span style="color:#cc7832">; </span><span style="color:#cc7832">            </span>lsStream.close()<span style="color:#cc7832">; </span><span style="color:#cc7832"> </span><span style="color:#cc7832">            </span>inputStream.close()<span style="color:#cc7832">; </span><span style="color:#cc7832"> </span><span style="color:#cc7832">        </span>}         System.<span style="color:#9876aa"><em>out</em></span>.println(wlPath)<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span>System.<span style="color:#9876aa"><em>out</em></span>.println(ljPath)<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span>System.<span style="color:#9876aa"><em>out</em></span>.println(lsPath)<span style="color:#cc7832">; </span>stock.setStockPhoto(ljPath)<span style="color:#cc7832">; </span><span style="color:#cc7832">        </span><span style="color:#9876aa">stockService</span>.addStock(stock)<span style="color:#cc7832">; </span><span style="color:#cc7832">         </span><span style="color:#cc7832">        return  </span><span style="color:#6a8759">"redirect:findStockAll.action"</span><span style="color:#cc7832">; </span><span style="color:#cc7832">         </span><span style="color:#cc7832">    </span>}</pre> <p> </div> <div>   </div> <div>   </div> <div>   </div> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-54676.htm">天津宠物领养机构电话 天津宠物领养机构电话号码</a></p>
+                                        <p>下一个：<a href="/news/article-55233.htm">Mysql数据库基本操作（六）多表查询-内连接查询，外连接查询</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-25653.htm" title="Goland proto文件 File Watch 自动生成">Goland proto文件 File Watch 自动生成</a></li>
+                        <li class="py-2"><a href="/news/article-26135.htm" title="win10下查看pyttorch实际使用的cuda版本，安装多个cuda(cuda9.0和10.0)，并切换cuda版本">win10下查看pyttorch实际使用的cuda版本，安装多个cuda(cuda9.0和10.0)，并切换cuda版本</a></li>
+                        <li class="py-2"><a href="/news/article-30816.htm" title="Docker提交镜像-数据卷-可视化">Docker提交镜像-数据卷-可视化</a></li>
+                        <li class="py-2"><a href="/news/article-44439.htm" title="动物医院申请条件及流程怎么写的好（动物医院营业执照申领需要哪些准备材料）">动物医院申请条件及流程怎么写的好（动物医院营业执照申领需要哪些准备材料）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-10-node-share-links.htm" title="1月10日→19M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月10日→19M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-6-free-node-subscribe-links.htm" title="12月6日→21.4M/S|2024年最新免费节点Free Vmess订阅链接地址">12月6日→21.4M/S|2024年最新免费节点Free Vmess订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-18782.htm" title="IDEA中配置maven环境">IDEA中配置maven环境</a></li>
+                        <li class="py-2"><a href="/news/article-20586.htm" title="一只猫多少钱最便宜（一只家猫多少钱）">一只猫多少钱最便宜（一只家猫多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-49916.htm" title="flex布局实现上下固定高度，中间自适应布局">flex布局实现上下固定高度，中间自适应布局</a></li>
+                        <li class="py-2"><a href="/news/article-29856.htm" title="2021SC@SDUSC sm2数字签名算法">2021SC@SDUSC sm2数字签名算法</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

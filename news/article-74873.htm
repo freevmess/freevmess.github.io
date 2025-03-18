@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-74873.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据结构-图的遍历——DFS深度优先搜索_在线工具</title>
+        <meta name="description" content="题目链接：https://www.dotcpp.com/oj/problem1702.html?sid=7509471&amp;lang=1#editor 模板题，dfs，dfs比bfs还简单，这个题" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-74873.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="数据结构-图的遍历——DFS深度优先搜索_在线工具" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/53a05cf2b5f806db3f8eab6fca668bb5.webp" />
+        <meta property="og:release_date" content="2025-03-16T10:28:28" />
+    <meta property="og:updated_time" content="2025-03-16T10:28:28" />
+        <meta property="og:description" content="题目链接：https://www.dotcpp.com/oj/problem1702.html?sid=7509471&amp;lang=1#editor 模板题，dfs，dfs比bfs还简单，这个题" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="数据结构-图的遍历——DFS深度优先搜索_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">数据结构-图的遍历——DFS深度优先搜索_在线工具</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>题目链接：https://www.dotcpp.com/oj/problem1702.html?sid=7509471&amp;lang=1#editor</p> <p>模板题，dfs，dfs比bfs还简单，这个题是简单的dfs思想，本来不想拿出来了，但既然做了，那就留给以后的人来学习把。</p> <h2>Talk is cheap. Show me the code.</h2> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 128, 128, 1)"> 1</span> #include&lt;bits/stdc++.h&gt; <span style="color: rgba(0, 128, 128, 1)"> 2</span> <span style="color: rgba(0, 0, 255, 1)">using</span> <span style="color: rgba(0, 0, 255, 1)">namespace</span><span style="color: rgba(0, 0, 0, 1)"> std; </span><span style="color: rgba(0, 128, 128, 1)"> 3</span> <span style="color: rgba(0, 0, 255, 1)">const</span> <span style="color: rgba(0, 0, 255, 1)">int</span> num=<span style="color: rgba(128, 0, 128, 1)">100</span><span style="color: rgba(0, 0, 0, 1)">; </span><span style="color: rgba(0, 128, 128, 1)"> 4</span> <span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> n; </span><span style="color: rgba(0, 128, 128, 1)"> 5</span> <span style="color: rgba(0, 0, 255, 1)">int</span> graph[num][num];<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">邻接矩阵</span> <span style="color: rgba(0, 128, 128, 1)"> 6</span> <span style="color: rgba(0, 0, 255, 1)">bool</span> vis[num];<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">标记数组</span> <span style="color: rgba(0, 128, 128, 1)"> 7</span> <span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> cnt; </span><span style="color: rgba(0, 128, 128, 1)"> 8</span> <span style="color: rgba(0, 0, 255, 1)">void</span> dfs(<span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> s) </span><span style="color: rgba(0, 128, 128, 1)"> 9</span> <span style="color: rgba(0, 0, 0, 1)">{ </span><span style="color: rgba(0, 128, 128, 1)">10</span>     vis<span class="show-more" title="文字折叠"><span><i class="be be-squareplus"></i>展开</span></span>=<span style="color: rgba(128, 0, 128, 1)">1</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">上来标记</span> <span style="color: rgba(0, 128, 128, 1)">11</span>     cout&lt;&lt;s&lt;&lt;<span style="color: rgba(128, 0, 0, 1)">"</span> <span style="color: rgba(128, 0, 0, 1)">"</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">打印走过的</span> <span style="color: rgba(0, 128, 128, 1)">12</span>     <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;n;i++<span style="color: rgba(0, 0, 0, 1)">) </span><span style="color: rgba(0, 128, 128, 1)">13</span> <span style="color: rgba(0, 0, 0, 1)">    { </span><span style="color: rgba(0, 128, 128, 1)">14</span>         <span style="color: rgba(0, 0, 255, 1)">if</span>(!vis[i]&amp;&amp;graph<span class="show-more" title="文字折叠"><span><i class="be be-squareplus"></i>展开</span></span>[i])<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">满足条件</span> <span style="color: rgba(0, 128, 128, 1)">15</span> <span style="color: rgba(0, 0, 0, 1)">        { </span><span style="color: rgba(0, 128, 128, 1)">16</span>             vis[i]=<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">; </span><span style="color: rgba(0, 128, 128, 1)">17</span>             dfs(i);<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">下一层</span> <span style="color: rgba(0, 128, 128, 1)">18</span> <span style="color: rgba(0, 0, 0, 1)">        } </span><span style="color: rgba(0, 128, 128, 1)">19</span> <span style="color: rgba(0, 0, 0, 1)">    } </span><span style="color: rgba(0, 128, 128, 1)">20</span> <span style="color: rgba(0, 0, 0, 1)">} </span><span style="color: rgba(0, 128, 128, 1)">21</span> <span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> main() </span><span style="color: rgba(0, 128, 128, 1)">22</span> <span style="color: rgba(0, 0, 0, 1)">{ </span><span style="color: rgba(0, 128, 128, 1)">23</span>     std::ios::sync_with_stdio(<span style="color: rgba(0, 0, 255, 1)">false</span><span style="color: rgba(0, 0, 0, 1)">); </span><span style="color: rgba(0, 128, 128, 1)">24</span>     cin&gt;&gt;<span style="color: rgba(0, 0, 0, 1)">n; </span><span style="color: rgba(0, 128, 128, 1)">25</span>     <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;n;i++<span style="color: rgba(0, 0, 0, 1)">) </span><span style="color: rgba(0, 128, 128, 1)">26</span> <span style="color: rgba(0, 0, 0, 1)">    { </span><span style="color: rgba(0, 128, 128, 1)">27</span>         <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> j=<span style="color: rgba(128, 0, 128, 1)">0</span>;j&lt;n;j++<span style="color: rgba(0, 0, 0, 1)">) </span><span style="color: rgba(0, 128, 128, 1)">28</span> <span style="color: rgba(0, 0, 0, 1)">        { </span><span style="color: rgba(0, 128, 128, 1)">29</span>             cin&gt;&gt;<span style="color: rgba(0, 0, 0, 1)">graph[i][j]; </span><span style="color: rgba(0, 128, 128, 1)">30</span> <span style="color: rgba(0, 0, 0, 1)">        } </span><span style="color: rgba(0, 128, 128, 1)">31</span> <span style="color: rgba(0, 0, 0, 1)">    } </span><span style="color: rgba(0, 128, 128, 1)">32</span>     dfs(<span style="color: rgba(128, 0, 128, 1)">0</span>);<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">从0开始搜</span> <span style="color: rgba(0, 128, 128, 1)">33</span>     <span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">; </span><span style="color: rgba(0, 128, 128, 1)">34</span> }</pre> </div> <p> </p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-74872.htm">Python格式化字符串方法——以%占位操作符为例</a></p>
+                                        <p>下一个：<a href="/news/article-75546.htm">动物疫苗注射方法有几种图片 动物疫苗注射方法有几种图片大全</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-47392.htm" title="网上的无货源网店是真的吗可信吗（网上无货源开网店是真的吗）">网上的无货源网店是真的吗可信吗（网上无货源开网店是真的吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-free-subscribe-node.htm" title="3月14日→18M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月14日→18M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-40469.htm" title="猫咪疫苗3针多少钱啊（猫咪的三针疫苗多少钱一只）">猫咪疫苗3针多少钱啊（猫咪的三针疫苗多少钱一只）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-free-node-subscribe-links.htm" title="3月4日→20.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月4日→20.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-subscribe-node.htm" title="3月12日→22.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月12日→22.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-free-high-speed-nodes.htm" title="2月8日→22M/S|2025年最新免费节点Free Vmess订阅链接地址分享">2月8日→22M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-23-free-subscribe-node.htm" title="2月23日→19.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">2月23日→19.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-23-node-share.htm" title="1月23日→20.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月23日→20.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-72201.htm" title="猫咪抓伤轻微出血要***吗多久（猫轻微抓伤有一点渗血要***吗?）">猫咪抓伤轻微出血要***吗多久（猫轻微抓伤有一点渗血要***吗?）</a></li>
+                        <li class="py-2"><a href="/news/article-37020.htm" title="上海2020年宠物领养活动有哪些公司呢（上海正规宠物领养机构）">上海2020年宠物领养活动有哪些公司呢（上海正规宠物领养机构）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-74872.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python格式化字符串方法——以%占位操作符为例</title>
+        <meta name="description" content="#Python格式化字符串方法——以%占位操作符为例  ''' 在python的使用过程中，有时需要将输出的字符串做统一规定，因此需要提前编写一个字符串的模板。 模板中有格式符，这些格式符为最后输的字" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-74872.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="Python格式化字符串方法——以%占位操作符为例" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/8b9027593695f50de0da20b1d0dc7434.webp" />
+        <meta property="og:release_date" content="2025-03-16T10:28:28" />
+    <meta property="og:updated_time" content="2025-03-16T10:28:28" />
+        <meta property="og:description" content="#Python格式化字符串方法——以%占位操作符为例  ''' 在python的使用过程中，有时需要将输出的字符串做统一规定，因此需要提前编写一个字符串的模板。 模板中有格式符，这些格式符为最后输的字" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Python格式化字符串方法——以%占位操作符为例">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">Python格式化字符串方法——以%占位操作符为例</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <pre><code class="prism language-python"><span class="token comment">#Python格式化字符串方法——以%占位操作符为例</span>  <span class="token triple-quoted-string string">''' 在python的使用过程中，有时需要将输出的字符串做统一规定，因此需要提前编写一个字符串的模板。 模板中有格式符，这些格式符为最后输的字符串预先占据位置， 并规定其应该呈现的格式，包括字符的位置、对齐方式、空位补充方式等。 Python中内置的%操作符可用于格式化字符串操作，控制字符串的呈现格式。 Python中还有其他的格式化字符串的方式，但%操作符的使用是最方便的。  %格式符的语法：%[(name)][flags][width].[precision]typecode。  (name)参数：当使用字典作为真实值的存放容器，name在此对应输出值关联的字典的键名，必须使用小括号将键名括起来, 如果字典中不存在该键,则引发异常，否则输出该键对应的值； flags可以有+,-,' '或0。 +表示应该包含数字的正负号。-表示左对齐，没有则表示右对齐。 ' '为一个空格，表示在正数的左侧填充一个空格，从而与负数对齐。0表示使用0填充； width表示该输出值占用的宽度； precision表示小数点后精度； typecode表示输出值的类型，  具体含义如下： %s             字符串 (采用str()的显示) %r             字符串 (采用repr()的显示) #repr() 函数将对象转化为供解释器读取的形式,输出的字符加引号。 %c             单个字符 %b             二进制整数 %d,%i          十进制整数 %o             八进制整数 %x,%X          十六进制整数 %e,%E          指数 (基底写为e,E) %f,%F          浮点数 %g,%G          指数或浮点数 (根据显示长度) %u             无符号数（没有细查文档，经测试可以输出负数） %%             字符"%" '''</span>   <span class="token comment"># 例1：</span> <span class="token comment">#%格式符的语法：%[(name)][flags][width].[precision]typecode。</span> example_1 <span class="token operator">=</span> <span class="token string">"I'm %s, I'm %d years old."</span> <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token string">'wrh'</span><span class="token punctuation">,</span> <span class="token number">29</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>example_1<span class="token punctuation">)</span> <span class="token triple-quoted-string string">''' 输出结果： I'm wrh, I'm 29 years old. '''</span>  <span class="token comment">#例2：</span> <span class="token comment">#%格式符的语法：%[(name)][flags][width].[precision]typecode。</span> example_2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"I'm %(name)s, I'm %(age)d years old."</span> <span class="token operator">%</span> <span class="token punctuation">{<!-- --></span><span class="token string">'name'</span><span class="token punctuation">:</span><span class="token string">'wrh'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">29</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>example_2<span class="token punctuation">)</span> <span class="token triple-quoted-string string">''' 输出结果： I'm wrh, I'm 29 years old. '''</span>  <span class="token comment">#例3：</span> <span class="token comment">#%格式符的语法：%[(name)][flags][width].[precision]typecode。</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%+10x"</span> <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token comment">#+表示应该包含数字的正负号，10表示宽度，表示十六进制（10的十六进制是a）</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%04d"</span> <span class="token operator">%</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment">#0表示用0填充，4表示宽度，d表示十进制整数</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%6.3f"</span> <span class="token operator">%</span> <span class="token number">2.3</span><span class="token punctuation">)</span> <span class="token comment">#6表示宽度，3表示精确到小数点后三位，f表示浮点数</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%.*f"</span> <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#width, precision为两个整数。我们可以利用*，来动态代入这两个量。4表示精确到小数点后四位。</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%*.f"</span> <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#width, precision为两个整数。我们可以利用*，来动态代入这两个量。4表示宽度为4。</span> <span class="token triple-quoted-string string">''' 输出结果：         +a 0005  2.300 1.2000    1 '''</span>  <span class="token comment">#例4</span> <span class="token comment">#%格式符的语法：%[(name)][flags][width].[precision]typecode。</span> a <span class="token operator">=</span> <span class="token string">'30c'</span> F <span class="token operator">=</span> <span class="token number">1.8</span><span class="token operator">*</span><span class="token builtin">float</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">32</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%.1fF"</span> <span class="token operator">%</span> F<span class="token punctuation">)</span> <span class="token comment">#精确到小数点后1位，浮点数，第一个F为固定字符，第二个F是所要格式化的字符变量。</span>  <span class="token triple-quoted-string string">''' 输出结果： 86.0F '''</span>  <span class="token comment">#练习题：</span>  <span class="token comment">#假设：学生信息存放在一个字典数据中，格式如下：</span> student<span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token string">'name'</span><span class="token punctuation">:</span><span class="token string">'小明'</span><span class="token punctuation">,</span><span class="token string">'class'</span><span class="token punctuation">:</span><span class="token number">20190301</span><span class="token punctuation">,</span><span class="token string">'score'</span><span class="token punctuation">:</span><span class="token number">597.5</span><span class="token punctuation">}</span> <span class="token comment">#1.输出学生姓名，右对齐，直接使用真实值</span> <span class="token comment">#%格式符的语法：%[(name)][flags][width].[precision]typecode。</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%s同学'</span> <span class="token operator">%</span> student<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#2.左对齐，名字占用4个长度，班级10个长度，分数7个长度的浮点数，真实值使用元组存储</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%10s班 %-4s同学，总分:%7.2f'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>student<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>student<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>student<span class="token punctuation">[</span><span class="token string">'score'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#3.#右对齐其他格式与上例同，只是格式化字符串和真实值存放在变量中，输出时格式化处理</span> <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'%10s班 %-4s同学，总分:%7.2f'</span> value<span class="token operator">=</span><span class="token punctuation">(</span>student<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>student<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>student<span class="token punctuation">[</span><span class="token string">'score'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">format</span> <span class="token operator">%</span> value<span class="token punctuation">)</span> <span class="token comment">#4.右对齐其他格式与上例同，只是格式化字符串和真实值存放在变量中，将格式化处理结果存放到变量再输出</span> <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'%10s班 %-4s同学，总分:%7.2f'</span> value<span class="token operator">=</span><span class="token punctuation">(</span>student<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>student<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>student<span class="token punctuation">[</span><span class="token string">'score'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> output<span class="token operator">=</span><span class="token builtin">format</span> <span class="token operator">%</span> value <span class="token keyword">print</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span> <span class="token comment">#5.使用字典存放真实值,直接格式化输出</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%(class)10s班 %(name)-4s同学，总分:%(score)7.2f'</span> <span class="token operator">%</span> student<span class="token punctuation">)</span> <span class="token comment">#6.使字典存放真实值，用变量方式存放格式化字符串</span> <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'%(class)10s班 %(name)-4s同学，总分:%(score)7.2f'</span> output<span class="token operator">=</span> <span class="token builtin">format</span> <span class="token operator">%</span> student <span class="token keyword">print</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span>  <span class="token triple-quoted-string string">''' 输出结果：   小明同学   20190301班 小明  同学，总分: 597.50   20190301班 小明  同学，总分: 597.50   20190301班 小明  同学，总分: 597.50   20190301班 小明  同学，总分: 597.50   20190301班 小明  同学，总分: 597.50  '''</span> </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-74182.htm">宠物店医疗许可证（宠物医疗许可证哪里办）</a></p>
+                                        <p>下一个：<a href="/news/article-74873.htm">数据结构-图的遍历——DFS深度优先搜索_在线工具</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-60916.htm" title="宠物口粮加工厂 宠物口粮加工厂家">宠物口粮加工厂 宠物口粮加工厂家</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-24-node-share.htm" title="1月24日→21M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月24日→21M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-1-node-share.htm" title="2月1日→21.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享">2月1日→21.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-node-share.htm" title="3月3日→21.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月3日→21.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-55233.htm" title="Mysql数据库基本操作（六）多表查询-内连接查询，外连接查询">Mysql数据库基本操作（六）多表查询-内连接查询，外连接查询</a></li>
+                        <li class="py-2"><a href="/news/article-75546.htm" title="动物疫苗注射方法有几种图片 动物疫苗注射方法有几种图片大全">动物疫苗注射方法有几种图片 动物疫苗注射方法有几种图片大全</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-25-free-subscribe-node.htm" title="1月25日→21.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月25日→21.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-53053.htm" title="附近免费领养宠物 附近免费领养宠物狗">附近免费领养宠物 附近免费领养宠物狗</a></li>
+                        <li class="py-2"><a href="/news/article-45925.htm" title="宠物饲料业务员好做吗（宠物饲料行业）">宠物饲料业务员好做吗（宠物饲料行业）</a></li>
+                        <li class="py-2"><a href="/news/article-58034.htm" title="动物疫苗一般多少钱打一针啊视频（动物疫苗价格查询）">动物疫苗一般多少钱打一针啊视频（动物疫苗价格查询）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

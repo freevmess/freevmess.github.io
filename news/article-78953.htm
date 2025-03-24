@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-78953.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Service Fabric 踩坑日志_在线工具</title>
+        <meta name="description" content="近期项目上面用到了Azure Service Fabric这个服务，它是用来做微服务架构的，由于这套代码和架构都是以前同学留下来的，缺少文档，项目组在折腾时也曾遇到几个问题，这里整理如下，以供参考。 " />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-78953.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="Azure Service Fabric 踩坑日志_在线工具" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/6d140d759856e2a69bea5b2ae7f5e397.webp" />
+        <meta property="og:release_date" content="2025-03-22T08:47:36" />
+    <meta property="og:updated_time" content="2025-03-22T08:47:36" />
+        <meta property="og:description" content="近期项目上面用到了Azure Service Fabric这个服务，它是用来做微服务架构的，由于这套代码和架构都是以前同学留下来的，缺少文档，项目组在折腾时也曾遇到几个问题，这里整理如下，以供参考。 " />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Azure Service Fabric 踩坑日志_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">Azure Service Fabric 踩坑日志_在线工具</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>近期项目上面用到了Azure Service Fabric这个服务，它是用来做微服务架构的，由于这套代码和架构都是以前同学留下来的，缺少文档，项目组在折腾时也曾遇到几个问题，这里整理如下，以供参考。</p> <blockquote> <p>我属于Service Fabric的初学者和使用者，很多概念也都是临时学习的，我们的工程师后续会更加细致的研究它。本文仅从故障排查经验总结的角度做了一点整理，有关这个服务的详细功能，或者官方推荐的最佳实践，请参考 <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview"  target="_blank"  rel="nofollow">https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview</a></p> </blockquote> <ol> <li> <p>有两种不同的service fabric可供选择。有条件（钱多）的话，可以选择 managed cluster， 省事，因为相当于在service fabric 基础上又封装了一层，简化了管理。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/b8704e462cb269b87e2705dca0dbc55a.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>开发环境没有必要设置那么多node，除非你的钱真的富裕得难受了。以上 managed cluster 最少有5个 node（节点），我建议开发环境用原生的 service fabric，然后 1个node就可以了，但可以把虚拟机的尺寸稍微调高一点。它会提示你说这样的设置不适合生产环境，让它提示。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/557ef3aa7262966207c27dcff50a2731.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>选择一个富裕一点的region，以便更快的扩容，如果真的有那么一天。例如目前 China Region 3 因为是新的，比较富裕。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/ab7f065b31caf18ac41f290d1b1664fe.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>选择新的操作系统，避免一些出现不必要的问题，如果能用container，更好。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/2dd0d9bd27986163ba7b2849b681207a.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>这个 service fabric 是基于一个所谓的 vm scale set 来进行扩展的。这个scale set，你要随时注意它有没有问题。你可以通过调整下面的参考来改变node数量，但要做好心理准备，可能需要的时间比较长。但是正常情况下，你的服务应该不至于down，因为理论上它是逐个机器更新的。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/789315854fe3b86d482e016feff9f0eb.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>创建service fabric 服务会出现一堆东西，你可能不了解它，但你不能随便删除它，万一有用呢</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/6de4dac2d942daa76034af89b023eb55.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>如果你修改了 vm scale set的东西，一定要及时查看 service fabric cluster的状态，如果它显示为 updating，那么恭喜你，它可能正在更新。但如果它一直显示为updating，你就可能要跟我们一样加几个班了。目前没有看到命令可以重启 service fabric，且错误日志不清晰，所以有时候会让人抓狂。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/5b130e6a640ccc8f430179bd73f6f91a.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>以上做好了，你可能以为就结束了。然鹅并不是。service fabric的资源中，虽然可以看到有一个 loadbalance的组件，而且也有一个对外的ip地址，但是它不能用来直接做微服务的对外访问，因为你的微服务可能会有N个（理论上），而每个微服务呢，建议要有独立的端口才行。这个无法在loadbalance组件中做设置。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/a899a796f8150e76e734d37a69b88b31.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> <li> <p>所以你需要有一个Application Gateway 的东西，能接管前端的用户请求，并且做路由。我万万没想到，在这个环节会遇到一些挑战，教训非常惨痛。首先，你需要映射https的端口的话，当然需要准备证书。这个证书，我们建议放在 key vault中。这里要命的地方是，它在创建https listener时会让你上传一个pfx文件，并且必须要有一个password，而从key vault中导出的pfx，默认并不需要password。所以你可能需要下一段代码。</p> <details> <summary>点击查看代码</summary> <pre><code>Install-Module AzureRM Connect-AzureRMAccount -Environment AzureChinaCloud  $vaultName = "xxxxx" $certificateName = "xxxxx" $pfxPath = [Environment]::GetFolderPath("Desktop") + "\$certificateName.pfx" $password = "pass@word1" $pfxSecret = Get-AzureKeyVaultSecret -VaultName $vaultName -Name $certificateName $pfxUnprotectedBytes = [Convert]::FromBase64String($pfxSecret.SecretValueText) $pfx = New-Object Security.Cryptography.X509Certificates.X509Certificate2 $pfx.Import($pfxUnprotectedBytes, $null, [Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable) $pfxProtectedBytes = $pfx.Export([Security.Cryptography.X509Certificates.X509ContentType]::Pkcs12, $password) [IO.File]::WriteAllBytes($pfxPath, $pfxProtectedBytes) </code></pre> </details> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/8f83fa68fb4767c4e6e8d04c372f00fd.jpg" alt="Azure Service Fabric 踩坑日志_在线工具"></p> </li> </ol> <p>先记录了这么多</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78256.htm">包含宠物领养平台的设计与实现研究现状论文的词条</a></p>
+                                        <p>下一个：<a href="/news/article-78954.htm">成人本科考兽医（成人本科兽医可以考证么）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-56353.htm" title="适合穷人养的猫咪（适合穷人养的猫咪品种）">适合穷人养的猫咪（适合穷人养的猫咪品种）</a></li>
+                        <li class="py-2"><a href="/news/article-70889.htm" title="修改 Docker 的默认存储路径">修改 Docker 的默认存储路径</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-12-node-share.htm" title="1月12日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月12日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-27-free-high-speed-nodes.htm" title="1月27日→20.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月27日→20.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-77571.htm" title="猫咪疫苗打针多少钱（猫咪打疫苗多少钱一针?）">猫咪疫苗打针多少钱（猫咪打疫苗多少钱一针?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-free-node-subscribe-links.htm" title="2月13日→20.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享">2月13日→20.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-58708.htm" title="天津宠物狗领养中心电话地址（天津宠物领养中心在哪?）">天津宠物狗领养中心电话地址（天津宠物领养中心在哪?）</a></li>
+                        <li class="py-2"><a href="/news/article-53595.htm" title="Vue中引入静态资源的几种方式">Vue中引入静态资源的几种方式</a></li>
+                        <li class="py-2"><a href="/news/article-50431.htm" title="IntelliJ IDEA 使用Tomcat配置和项目部署详细教程">IntelliJ IDEA 使用Tomcat配置和项目部署详细教程</a></li>
+                        <li class="py-2"><a href="/news/article-44438.htm" title="宠物店利润和成本分析图（宠物店的利润率）">宠物店利润和成本分析图（宠物店的利润率）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

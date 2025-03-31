@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-85261.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java集成pdf.js实现pdf文件在线预览</title>
+        <meta name="description" content="最近项目需要实现在线预览pdf文件功能，找来找去，发现有个pdf.js的类库挺好用，直接用js实现在线预览。 pdf.js是开源项目，github的地址：https://github.com/mozi" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-85261.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="java集成pdf.js实现pdf文件在线预览" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/53a05cf2b5f806db3f8eab6fca668bb5.webp" />
+        <meta property="og:release_date" content="2025-03-31T08:40:27" />
+    <meta property="og:updated_time" content="2025-03-31T08:40:27" />
+        <meta property="og:description" content="最近项目需要实现在线预览pdf文件功能，找来找去，发现有个pdf.js的类库挺好用，直接用js实现在线预览。 pdf.js是开源项目，github的地址：https://github.com/mozi" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="java集成pdf.js实现pdf文件在线预览">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">java集成pdf.js实现pdf文件在线预览</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p>最近项目需要实现在线预览pdf文件功能，找来找去，发现有个pdf.js的类库挺好用，直接用js实现在线预览。<br /> pdf.js是开源项目，<strong>github</strong>的地址：<br /><strong>https://github.com/mozilla/pdf.js</strong><br /> 根据教程指引，有以下几个步骤：</p> <ul> <li>clone源码到本地，如果是linux的话很方便，windows的话要另外下载git工具；<br /><strong>git地址</strong>：https://git-for-windows.github.io/<br /> 下载按默认安装方式就行，然后在开始菜单找到git打开git cmd就可以clone源码，当然，也可以直接download源码，不过国内的下载的速度实在是太慢了，可以更改hosts文件加快下载，在hosts文件添加：</li> </ul> <pre><code>185.31.16.184 github.global.ssl.fastly.net </code></pre> <p><strong>PS</strong>：其实我们使用pdf.js，只需要构建后的内容，大家可以到我的百度云盘下载：http://pan.baidu.com/s/1bDK8Zs ，下载后复制generic到tomcat的webapps下，这样访问 <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8080/web/viewer.html"  rel="nofollow">http://localhost:8080/web/viewer.html</a> 能看到demo效果，跳过以下步骤，直接到项目集成。</p> <ul> <li>clone好源码后使用nodejs的包管理工具npm安装gulp构建工具，如下：</li> </ul> <pre><code>npm install -g gulp-cli </code></pre> <p>安装好gulp之后在源代码使用npm安装模块：</p> <pre><code>npm install </code></pre> <p>安装好模块后使用gulp构建本地web服务器：</p> <pre><code>gulp server </code></pre> <p>效果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230211/1c379003a51ead4878500baf4050b158.jpg" alt="java集成pdf.js实现pdf文件在线预览"><br /> 接着访问 http://localhost:8888/web/viewer.html 就能看到效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/84561b65c226fa81128aee81482663f3.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>接下来使用gulp构建pdf.js，如下：</p> <pre><code>gulp generic </code></pre> <p>构建完成后项目目录下生成build文件夹：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/b093f23b2b107d630013137a37d0c5f3.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>generic/web/viewer.html渲染pdf阅读器页面，而generic/web/viewer.js则是打开指定的pdf文件，打开viewer.js<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/fa42422476971e464c61ff52912e07cc.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>可以看到，默认打开的是generic/web/compressed.tracemonkey-pldi-09.pdf文件，再来看下面这段代码：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230211/d49370f5ebbff44b4272c0508bcd1e0a.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>这样，我们就可以使用传递file形参来动态指定打开的pdf文件，如：</p> <pre><code>http://localhost:8080/generic/web/viewer.html?file=file.pdf </code></pre> <ul> <li>接着把项目集成到web项目中， 把generic作为插件使用，目录结构如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/22ec3ab3421b8de2af0b7913b71d6fb0.jpg" alt="java集成pdf.js实现pdf文件在线预览"> </li> </ul> <p>先写一个简单的jsp页面，使用iframe标签来加载pdf：</p> <pre><code>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %&gt; &lt;%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %&gt; &lt;html&gt; &lt;head&gt;     &lt;title&gt;Title&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;iframe src="&lt;c:url value="/res/pdf/web/viewer.html" /&gt;?file=/displayPDF.do"         width="100%" height="800"&gt;&lt;/iframe&gt;  &lt;/body&gt; &lt;/html&gt; </code></pre> <p>接着写个controller读取pdf文件并返回：</p> <pre><code>import org.apache.commons.io.IOUtils; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.RequestMapping;  import javax.servlet.http.HttpServletResponse; import java.io.File; import java.io.FileInputStream; import java.io.OutputStream;  /**  * 在线预览pdf  * @Auothor wzx  * @Date 2016/12/18 0018  */ @Controller public class DisplayPDFController {      @RequestMapping("/displayPDF.do")     public void displayPDF(HttpServletResponse response) {         try {             File file = new File("F:/资料/pdf/JVM基础.pdf");             FileInputStream fileInputStream = new FileInputStream(file);             response.setHeader("Content-Disposition", "attachment;fileName=test.pdf");             response.setContentType("multipart/form-data");             OutputStream outputStream = response.getOutputStream();             IOUtils.write(IOUtils.toByteArray(fileInputStream), outputStream);         } catch(Exception e) {             e.printStackTrace();         }     } } </code></pre> <p>运行，在浏览器访问以下地址：</p> <pre><code>http://localhost:8080/res/pdf.jsp </code></pre> <p>效果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230211/ba0a16ac132c51779a01872368385411.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>本质是访问generic/web/viewer.html，通过指定的file形参打开指定pdf文件。</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://url.cn/QPlTOdTu"  rel="nofollow"><img decoding="async" src="http://img.555519.xyz/uploads/20230211/e9d51070a8a7bc5103d9e067c504a6cb.jpg" alt="java集成pdf.js实现pdf文件在线预览"></a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-84544.htm">人和动物打的狂犬疫苗一样吗会传染吗（人和动物提取的狂犬疫苗区别）</a></p>
+                                        <p>下一个：<a href="/news/article-85262.htm">做梦梦到抱别的女人睡觉好不好（做梦梦见抱着别的女人）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-6-free-subscribe-node.htm" title="2月6日→19.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">2月6日→19.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-36536.htm" title="动物医院实践心得体会怎么写范文 动物医院实践心得体会怎么写范文大全">动物医院实践心得体会怎么写范文 动物医院实践心得体会怎么写范文大全</a></li>
+                        <li class="py-2"><a href="/news/article-78954.htm" title="成人本科考兽医（成人本科兽医可以考证么）">成人本科考兽医（成人本科兽医可以考证么）</a></li>
+                        <li class="py-2"><a href="/news/article-74873.htm" title="数据结构-图的遍历——DFS深度优先搜索_在线工具">数据结构-图的遍历——DFS深度优先搜索_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-node-share-links.htm" title="1月18日→22.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月18日→22.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-4-node-share-links.htm" title="2月4日→22M/S|2025年最新免费节点Free Vmess订阅链接地址分享">2月4日→22M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-node-share.htm" title="3月10日→22.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月10日→22.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-76897.htm" title="动物疫苗公司招聘信息网 动物疫苗公司招聘信息网站">动物疫苗公司招聘信息网 动物疫苗公司招聘信息网站</a></li>
+                        <li class="py-2"><a href="/news/article-72860.htm" title="宠物猫疫苗多少钱一针?（宠物猫打疫苗多少钱一针_养猫注意事项）">宠物猫疫苗多少钱一针?（宠物猫打疫苗多少钱一针_养猫注意事项）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-node-share.htm" title="3月13日→20.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月13日→20.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

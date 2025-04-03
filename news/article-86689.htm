@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-86689.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript获取URL参数的方法分享_javascript技巧</title>
+        <meta name="description" content="目录  一、字符串 split 方法 二、使用 URLSearchParams 方法  1、解析搜索字符串 2、生成搜索字符串 3、Node.js 代码  三、使用正则匹配方法  四、使用第三方库 q" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-86689.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="JavaScript获取URL参数的方法分享_javascript技巧" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/7d88deb04924cbd6a09f28faa6f850bb.webp" />
+        <meta property="og:release_date" content="2025-04-02T07:44:08" />
+    <meta property="og:updated_time" content="2025-04-02T07:44:08" />
+        <meta property="og:description" content="目录  一、字符串 split 方法 二、使用 URLSearchParams 方法  1、解析搜索字符串 2、生成搜索字符串 3、Node.js 代码  三、使用正则匹配方法  四、使用第三方库 q" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="JavaScript获取URL参数的方法分享_javascript技巧">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">JavaScript获取URL参数的方法分享_javascript技巧</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">一、字符串 split 方法</a></li> <li><a href="#_label1" rel="nofollow">二、使用 URLSearchParams 方法</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_1_0" rel="nofollow">1、解析搜索字符串</a></li> <li><a href="#_lab2_1_1" rel="nofollow">2、生成搜索字符串</a></li> <li><a href="#_lab2_1_2" rel="nofollow">3、Node.js 代码</a></li> </ul> <li><a href="#_label2" rel="nofollow">三、使用正则匹配方法</a></li> <ul class="second_class_ul"></ul> <li><a href="#_label3" rel="nofollow">四、使用第三方库 qs</a></li> <ul class="second_class_ul"></ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>一、字符串 split 方法</h2> <p><code>url</code> 地址是字符串形式的，所以利用 <code>split</code> 方法将参数提取出来，<code>该方法比较常用</code>，而且容易理解（无关正则）</p> <div class="ay1code"> <pre class="brush:js;">let URL = "http://www.baidu.com?name=小宇&amp;age=25&amp;sex=男&amp;wife=小君";  function getUrlParams(url) {      // 通过 ? 分割获取后面的参数字符串      let urlStr = url.split('?')[1];      // 创建空对象存储参数  	let obj = {};      // 再通过 &amp; 将每一个参数单独分割出来  	let paramsArr = urlStr.split('&amp;');  	for(let i = 0,len = paramsArr.length;i &lt; len;i++){          // 再通过 = 将每一个参数分割为 key:value 的形式  		let arr = paramsArr[i].split('=');  		obj[arr[0]] = arr[1];  	}  	return obj;  }  console.log(getUrlParams(URL));</pre> </div> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220427/a067179b9df9eb63a6203fe843a7054c.jpg"></p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>二、使用 URLSearchParams 方法</h2> <p class="maodian"><a name="_lab2_1_0" rel="nofollow"></a></p> <h3>1、解析搜索字符串</h3> <div class="ay1code"> <pre class="brush:js;">let url = 'https://www.baidu.com/s?ie=UTF-8&amp;wd=%E8%AE%B8%E5%96%84%E7%A5%A5&amp;p=1';  let urlStr = url.split('?')[1];  const params = new URLSearchParams(urlStr);  console.log(params.get('k'));   // 返回字符串“许善祥”，支持自动 UTF-8 解码  console.log(params.get('p'));   // 返回字符串“1”  console.log(params.get('xxx')); // 如果没有 xxx 这个键，则返回 null  console.log(params.has('xxx')); // 当然也可以通过 has() 方法查询是否存在指定的键  console.log(params.keys());     // 返回一个 ES6 Iterator，内含 ['k', 'p']  console.log(params.values());   // 返一个 ES6 Iterator，内含 ['许善祥', '1']  console.log(params.entries());  // 与 Map.prototype.entries() 类似</pre> </div> <p class="maodian"><a name="_lab2_1_1" rel="nofollow"></a></p> <h3>2、生成搜索字符串</h3> <div class="ay1code"> <pre class="brush:js;">const params = new URLSearchParams();  params.set('k', '许善祥');       // 设置参数  params.set('p', 1);             // 支持 Boolean、Number 等丰富类型  console.log(params.toString()); // k=%E8%AE%B8%E5%96%84%E7%A5%A5&amp;p=1</pre> </div> <p class="maodian"><a name="_lab2_1_2" rel="nofollow"></a></p> <h3>3、Node.js 代码</h3> <div class="ay1code"> <pre class="brush:js;">const { URLSearchParams } = require('url');    const urlSearchParams = new URLSearchParams();</pre> </div> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>三、使用正则匹配方法</h2> <p>正则匹配功能强大，不仅可以实现在登录注册时的账号、密码、邮箱、手机号等验证（<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://xushanxiang.com/common-regular-expressions.html"   target="_blank" rel="nofollow">看这里</a>），还可以非常方便的处理一些字符串（校验、替换、提取等操作）。</p> <div class="ay1code"> <pre class="brush:js;">let URL = 'http://www.baidu.com?name=祥&amp;friend=宇';  function getUrlParams3(url){      // \w+ 表示匹配至少一个(数字、字母及下划线),      // [\u4e00-\u9fa5]+ 表示匹配至少一个中文字符      let pattern = /(\w+|[\u4e00-\u9fa5]+)=(\w+|[\u4e00-\u9fa5]+)/ig;      let result = {};      url.replace(pattern, ($, $1, $2)=&gt;{          result[$1] = $2;      });      return result;  }  console.log(getUrlParams3(URL));  // {name: '祥', friend: '宇'}</pre> </div> <p class="maodian"><a name="_label3" rel="nofollow"></a></p> <h2>四、使用第三方库 qs</h2> <p>使用第三方库 qs 也可以实现 url 中参数字符的提取，还能实现将参数对象转为 url 参数形式，需要注意的是浏览器 cdn 方式引入时是默认添加到全局对象 window 的 Qs 属性上。</p> <div class="ay1code"> <pre class="brush:js;">&lt;script src="https://cdn.bootcdn.net/ajax/libs/qs/6.10.3/qs.min.js"&gt;&lt;/script&gt;  &lt;script&gt;  let URL = 'http://www.baidu.com?name=祥&amp;friend=宇';  function getUrlParams4(url) {      // 引入 qs 库时会默认挂在到全局 window 的 Qs 属性上      // console.log(window);      let urlStr = url.split('?')[1];      let result = Qs.parse(urlStr);      // 拼接额外参数      let otherParams = {          homepage: 'xushanxiang.com'      };      let str = Qs.stringify(otherParams);      let newUrl = url + str;      return {result, newUrl};  }  console.log(getUrlParams4(URL));</pre> </div> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220427/d21a816b6d4bae21e7e8a4a89f50b9c8.jpg"></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-85986.htm">为什么家猫不打疫苗会死（为什么家猫不打疫苗会死掉）</a></p>
+                                        <p>下一个：<a href="/news/article-86690.htm">厦门领养宠物猫中心电话地址（厦门领养宠物猫中心电话地址）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-72201.htm" title="猫咪抓伤轻微出血要***吗多久（猫轻微抓伤有一点渗血要***吗?）">猫咪抓伤轻微出血要***吗多久（猫轻微抓伤有一点渗血要***吗?）</a></li>
+                        <li class="py-2"><a href="/news/article-76897.htm" title="动物疫苗公司招聘信息网 动物疫苗公司招聘信息网站">动物疫苗公司招聘信息网 动物疫苗公司招聘信息网站</a></li>
+                        <li class="py-2"><a href="/news/article-67633.htm" title="Python里的引用与拷贝规律">Python里的引用与拷贝规律</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-node-share-links.htm" title="3月8日→19.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月8日→19.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-81701.htm" title="动物疫苗接种间隔多长时间 动物疫苗接种间隔多长时间打一次">动物疫苗接种间隔多长时间 动物疫苗接种间隔多长时间打一次</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-free-node-subscribe-links.htm" title="3月7日→18.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月7日→18.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-72859.htm" title="不宜养猫的4个属相女人是谁（什么生肖的人不适合养猫,爱养猫的人必看!）">不宜养猫的4个属相女人是谁（什么生肖的人不适合养猫,爱养猫的人必看!）</a></li>
+                        <li class="py-2"><a href="/news/article-73519.htm" title="宠物粮市场前景分析报告（宠物粮市场前景分析报告）">宠物粮市场前景分析报告（宠物粮市场前景分析报告）</a></li>
+                        <li class="py-2"><a href="/news/article-73520.htm" title="宠物粮生产厂家排名榜单最新（生产宠物粮的工厂有哪些）">宠物粮生产厂家排名榜单最新（生产宠物粮的工厂有哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-82418.htm" title="动物医院好评语30字以内 动物医院好评语30字以内怎么写">动物医院好评语30字以内 动物医院好评语30字以内怎么写</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

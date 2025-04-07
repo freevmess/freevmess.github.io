@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-90347.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>springboot Jar包 秒部署到Linux服务器运行</title>
+        <meta name="description" content="最近开发完一个springboot项目，打包成jar包之后要部署到Linux服务器上面运行，我用的nohup java -jar 命令，但是代码更新之后重新部署的时候覆盖原来的项目，又要手动运行 ps" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-90347.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="springboot Jar包 秒部署到Linux服务器运行" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/10a68fe81aa9162033af48494324ca24.webp" />
+        <meta property="og:release_date" content="2025-04-07T09:02:04" />
+    <meta property="og:updated_time" content="2025-04-07T09:02:04" />
+        <meta property="og:description" content="最近开发完一个springboot项目，打包成jar包之后要部署到Linux服务器上面运行，我用的nohup java -jar 命令，但是代码更新之后重新部署的时候覆盖原来的项目，又要手动运行 ps" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot Jar包 秒部署到Linux服务器运行">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">springboot Jar包 秒部署到Linux服务器运行</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>最近开发完一个springboot项目，打包成jar包之后要部署到Linux服务器上面运行，我用的nohup java -jar 命令，但是代码更新之后重新部署的时候覆盖原来的项目，又要手动运行</p> <p>ps -ef|grep jar包名 去查找进程，然后kill -9 去kill进程，有时候nohup进程老是kill不掉,只能多试几次，烦不胜烦。后来专门花时间研究了一下脚本和本地window上传文件到linux服务器的命令，整合了一个启动脚本，顿时项目部署变得无比简单，一分钟内在线上的代码就可以更新了。下面是具体步骤：</p> <p>1、在idea上写一个maven 打包命令 ： clean package -DskipTests=true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (打包跳过测试，打包更快)</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230110/b5bf80c3373d58da3bcfe97df1b1a9a8.jpg" alt="springboot Jar包 秒部署到Linux服务器运行"></p> <p><span style="white-space:pre"><br /></span></p> <p><span style="white-space:pre">2</span>、运行 package 打包，会在项目根路径target下面生成jar包</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230110/8d1da44f6e9942f999094f733e7ccb73.jpg" alt="springboot Jar包 秒部署到Linux服务器运行"></p> <p>3、接下来我们要把本地项目jar包上传到Linux服务器上面，怎么快速上传呢？主要有两种方式：</p> <p>一、直接用鼠标拉取jar包到Xftp文件夹下，如下图</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230110/a2bb06c0b8776cd0a50b516697e95d3b.jpg" alt="springboot Jar包 秒部署到Linux服务器运行"></p> <p></p> <p>二、直接在用命令上传，比较推荐这种，不用再去打开target文件夹了，也不用再拉取了</p> <p>我们先安装一个文件上传和下载的工具软件包 ：yum -y install lrzsz &nbsp; &nbsp;</p> <p>lrzsz包安装完成后包括上传rz、下载sz命令</p> <p>然后我们可以 输入命令 rz -y &nbsp; &nbsp; ，（rz 代表上传， -y 可以强制覆盖文件），会弹出一个文件选择框，我们可以鼠标选择jar包位置，确定即可，下次再上传的时候会直接弹出jar包窗口，当然下次用的时候也可以用tab键光标跳转选择，这就完全不用鼠标了，注意下面发送文件到ASCII不要打钩<img decoding="async" src="http://img.555519.xyz/uploads/20230110/b70614b72786db36871976286965534c.jpg" alt="springboot Jar包 秒部署到Linux服务器运行"></p> <p></p> <p>4、最后就是重头戏了，项目重启的脚本，写个start.sh 的脚本，注意脚本和jar包同级目录 ，&nbsp;如下：</p> <pre><code class="language-java">#!/bin/sh RESOURCE_NAME=resource-0.0.1-SNAPSHOT.jar  tpid=`ps -ef|grep $RESOURCE_NAME|grep -v grep|grep -v kill|awk '{print $2}'` if [ ${tpid} ]; then echo 'Stop Process...' kill -15 $tpid fi sleep 5 tpid=`ps -ef|grep $RESOURCE_NAME|grep -v grep|grep -v kill|awk '{print $2}'` if [ ${tpid} ]; then echo 'Kill Process!' kill -9 $tpid else echo 'Stop Success!' fi  tpid=`ps -ef|grep $RESOURCE_NAME|grep -v grep|grep -v kill|awk '{print $2}'` if [ ${tpid} ]; then     echo 'App is running.' else     echo 'App is NOT running.' fi   rm -f tpid nohup java -jar ./$RESOURCE_NAME --spring.profiles.active=test &amp; echo $! &gt; tpid echo Start Success! </code></pre> <p> 5、脚本运行 &nbsp;&nbsp;</p> <p>cd /home (我是把jar包和脚本放在home下面)</p> <p>chmod +x start.sh (第一次运行的时候获取一下超级管理员权限)</p> <p>然后以后每次运行直接</p> <p>./start.sh 即可</p> <p></p> <p>拷贝脚本的时候运行的时候如果报错，应该是文件格式转换的问题</p> </h1> <p>可以 &nbsp;yum -y install dos2unix &nbsp;</p> <p>然后 dos2unix start.sh&nbsp;</p> <p>重新运行脚本</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-89595.htm">2023年公务员国考报名官网（2023年国家公务员考试公告）</a></p>
+                                        <p>下一个：<a href="/news/article-90349.htm">比熊宠物店回收（宠物市场比熊多少钱）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-67633.htm" title="Python里的引用与拷贝规律">Python里的引用与拷贝规律</a></li>
+                        <li class="py-2"><a href="/news/article-80347.htm" title="PostgreSQL执行计划：Bitmap scan VS index only scan">PostgreSQL执行计划：Bitmap scan VS index only scan</a></li>
+                        <li class="py-2"><a href="/news/article-66386.htm" title="猫三联一共几针多少钱多久打一次好呢（猫三联一共几针多少钱多久打一次好呢）">猫三联一共几针多少钱多久打一次好呢（猫三联一共几针多少钱多久打一次好呢）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-node-share.htm" title="4月4日→23M/S|2025年最新免费节点Free Vmess订阅链接地址分享">4月4日→23M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-69580.htm" title="CSS中文本居中显示">CSS中文本居中显示</a></li>
+                        <li class="py-2"><a href="/news/article-67016.htm" title="动物疫苗打到人身上有事吗视频播放（动物疫苗不小心扎到人身上会怎么样）">动物疫苗打到人身上有事吗视频播放（动物疫苗不小心扎到人身上会怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-81702.htm" title="动物疫苗去哪里打 动物疫苗去哪里打便宜">动物疫苗去哪里打 动物疫苗去哪里打便宜</a></li>
+                        <li class="py-2"><a href="/news/article-68938.htm" title="动物疫苗品牌排名前十 动物疫苗品牌排名前十名">动物疫苗品牌排名前十 动物疫苗品牌排名前十名</a></li>
+                        <li class="py-2"><a href="/news/article-75546.htm" title="动物疫苗注射方法有几种图片 动物疫苗注射方法有几种图片大全">动物疫苗注射方法有几种图片 动物疫苗注射方法有几种图片大全</a></li>
+                        <li class="py-2"><a href="/news/article-69581.htm" title="猫咪打疫苗几针才能有免疫证明呢（猫咪打几针疫苗有抗体）">猫咪打疫苗几针才能有免疫证明呢（猫咪打几针疫苗有抗体）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

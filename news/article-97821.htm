@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-97821.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springboot  文件上传(base64方式)</title>
+        <meta name="description" content="使用场景： 对于互联网项目，基本都会采用分布式的文件存储方式，比如fastdfs,&nbsp; 保证高用户量的时候 文件操作效率(上传，读取)。 但是对于小型产品来说，一般用户使用量不大，并且对文件的" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-97821.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="Springboot  文件上传(base64方式)" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/93d6db33153b8690ef88deb1a1ea8d6c.webp" />
+        <meta property="og:release_date" content="2025-04-17T09:00:43" />
+    <meta property="og:updated_time" content="2025-04-17T09:00:43" />
+        <meta property="og:description" content="使用场景： 对于互联网项目，基本都会采用分布式的文件存储方式，比如fastdfs,&nbsp; 保证高用户量的时候 文件操作效率(上传，读取)。 但是对于小型产品来说，一般用户使用量不大，并且对文件的" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Springboot  文件上传(base64方式)">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">Springboot  文件上传(base64方式)</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h2>使用场景：</h2> <p>对于互联网项目，基本都会采用分布式的文件存储方式，比如fastdfs,&nbsp; 保证高用户量的时候</p> <p>文件操作效率(上传，读取)。</p> <p><strong>但是对于小型产品来说，一般用户使用量不大，并且对文件的操作量也不大，甚至很小。</strong></p> <p><strong>如果去给客户部署一套吹牛逼的分布式存储方案，无疑增大了维护成本，得不偿失。</strong></p> <p>针对上述场景，可以考虑使用base64的方式存储。代码如下：</p> <pre class="has"><code>import io.swagger.annotations.Api; import io.swagger.annotations.ApiOperation; import io.swagger.annotations.ApiResponses; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RequestParam; import org.springframework.web.bind.annotation.RestController; import org.springframework.web.multipart.MultipartFile;  import java.io.File; import java.io.FileInputStream; import java.util.HashMap; import java.util.Map;  @RestController @RequestMapping({"/upload"}) @Api(tags="文件上传") public class UploadController {      @PostMapping({"doUpload"})     @ApiOperation("文件上传(不需要token令牌)")     @ApiResponses({@io.swagger.annotations.ApiResponse(code=200, message="请求成功,返回结果result:{filename 文件名},{base64 base64编码}"), @io.swagger.annotations.ApiResponse(code=400, message="请求失败")})     public Map&lt;String, Object&gt; doUpload(@RequestParam("file") MultipartFile file) throws Exception {         if (file == null) {             return new HashMap(0);         }          Map map = new HashMap(2);          // 原文件名称         String filename = file.getOriginalFilename();          // 创建临时文件         File tempFile = File.createTempFile("tem", null);         file.transferTo(tempFile);         tempFile.deleteOnExit();          // 文件输入流         FileInputStream inputStream = new FileInputStream(tempFile);          byte[] buffer = new byte[(int)tempFile.length()];         inputStream.read(buffer);         inputStream.close();          // 转换为base64编码格式         String base64 = new sun.misc.BASE64Encoder().encode(buffer);          // 上面方法中获得的base64编码中，包含有换行符，统一全部替换掉         base64 = base64.replaceAll("[\\s*\t\n\r]", "");          // 返回值         map.put("filename", filename);         map.put("base64", base64);          return map;     } }</code></pre> <p>关于上述做几点说明：</p> <p><strong>1. 上述文件上传的时候，文件越大，产生的base64值也越大</strong></p> <p>故需要针对系统来评估数据库中对应字段的设计，存储长达，比如是&nbsp; text还是longtext(做个关联表，一般不会频繁操作，优化下查询效率)</p> <p><strong>2. 返回值</strong></p> <p>返回 原文件名称和base64编码</p> <p><strong>3.&nbsp; 页面传值保存</strong></p> <p>尽量采用body的形式传值，因为如果是以拼接的方式，由于值太长太大，会卡死浏览器</p> <p><strong>4.&nbsp; 关于图片 base64方式的显示</strong></p> <pre class="has"><code>// 把下面逗号后面的 base64编码 的文字替换成真正的base64码即可 // 然后放入到html文件中即可显示 &lt;img src="https://img-blog.csdnimg.cn/2022010621212522899.png" alt="Springboot  文件上传(base64方式)"&gt;</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-97818.htm">【关于js数组对象一道题】将数组对象中的英文属性名替换为中文属性名</a></p>
+                                        <p>下一个：<a href="/news/article-98489.htm">全国宠物领养平台可信吗现在（全国宠物领养中心官网）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-99276.htm" title="免费领养小猫崽剑川县（免费领养小猫小狗）">免费领养小猫崽剑川县（免费领养小猫小狗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-node-share.htm" title="3月21日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月21日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-high-speed-nodes.htm" title="3月20日→18.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月20日→18.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-72201.htm" title="猫咪抓伤轻微出血要***吗多久（猫轻微抓伤有一点渗血要***吗?）">猫咪抓伤轻微出血要***吗多久（猫轻微抓伤有一点渗血要***吗?）</a></li>
+                        <li class="py-2"><a href="/news/article-82419.htm" title="广州宠物市场哪里比较好（广州宠物市场哪里比较好一点）">广州宠物市场哪里比较好（广州宠物市场哪里比较好一点）</a></li>
+                        <li class="py-2"><a href="/news/article-94282.htm" title="同安宠物领养中心地址电话（同安宠物狗店）">同安宠物领养中心地址电话（同安宠物狗店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-free-node-subscribe.htm" title="3月28日→19.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月28日→19.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-78953.htm" title="Azure Service Fabric 踩坑日志_在线工具">Azure Service Fabric 踩坑日志_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-node-share.htm" title="3月3日→21.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月3日→21.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-node-share.htm" title="3月15日→20.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月15日→20.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">59</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

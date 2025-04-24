@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freevmess.github.io/news/article-102222.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golang开发gRPC服务详解</title>
+        <meta name="description" content="gRPC是Google发起的一个开源RPC框架，使用HTTP/2传输协议，使用Protocol Buffers编码协议，相比RESTful框架的程序性能提高不少，而且当前流行的编程语言基本都已经支持。" />
+        <link rel="icon" href="/assets/website/img/freevmess/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Vmess机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freevmess.github.io/news/article-102222.htm" />
+    <meta property="og:site_name" content="Free Vmess机场节点分享官网" />
+    <meta property="og:title" content="Golang开发gRPC服务详解" />
+    <meta property="og:image" content="https://freevmess.github.io/uploads/20240910/3b1d55388dd4ced9ffaea95be04120bc.webp" />
+        <meta property="og:release_date" content="2025-04-23T08:42:54" />
+    <meta property="og:updated_time" content="2025-04-23T08:42:54" />
+        <meta property="og:description" content="gRPC是Google发起的一个开源RPC框架，使用HTTP/2传输协议，使用Protocol Buffers编码协议，相比RESTful框架的程序性能提高不少，而且当前流行的编程语言基本都已经支持。" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Golang开发gRPC服务详解">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <link rel="stylesheet" href="/assets/website/css/freevmess/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freevmess/purple.css">
+    <link rel="preload" href="/assets/website/css/freevmess/thicccboi.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQF2XGX8MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DQF2XGX8MV');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="content-wrapper">
+                <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                                                    <span>Free Vmess</span>
+                                                </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas-nav">
+                        <div class="offcanvas-header d-lg-none d-xl-none">
+                            <a href=""><img src="/assets/website/img/freevmess/logo-light.png"></a>
+                            <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+            <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <h1 class="display-1 mb-3">Golang开发gRPC服务详解</h1>
+                        <p class="lead px-xxl-10">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-gradient-reverse-primary py-5" id="demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail">
+                      				  				  				<p>gRPC是Google发起的一个开源RPC框架，使用HTTP/2传输协议，使用Protocol Buffers编码协议，相比RESTful框架的程序性能提高不少，而且当前流行的编程语言基本都已经支持。</p> <p>Golang开发gRPC应用程序的套路也已经很清晰，这篇文章就来做一个简单的介绍，算是入门。</p> </h1> <p>这个工具也称为proto编译器，可以用来生成各种开发语言使用proto协议的代码。</p> <p>下载地址：https://github.com/protocolbuffers/protobuf/releases</p> <p>一般下载最新版本就行，注意要符合自己当前的操作系统。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/de85a9ab13fbc712184dbb19a2978315.jpg" alt="Golang开发gRPC服务详解"></p> <p>解压后里边有个<em>protoc.exe</em> ，拷贝到<em>GOPATH</em> 的 bin 目录下，我这里就是<em>C:/Users/PC-001/go/bin</em> ，PC-<em>001</em> 是登录当前操作系统的用户名，需要换成你自己的。<em>GOPATH</em> 可以通过执行<em>go env</em> 查看到。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/8ce5003d244d42eba4cd01da60648c45.jpg" alt="Golang开发gRPC服务详解"></p> <p>一般都是把<em>GOPATH</em> 的<em>bin</em> 目录添加到环境变量的<em>PATH</em> 变量中，如果没有，请自行添加上。</p> </h1> <p>执行如下命令，会在<em>GOPATH</em> 的<em>bin</em> 目录下生成两个可执行文件：protoc-gen-go.exe 和 protoc-gen-go-grpc.exe。这两个插件可以用来生成Golang版本的proto协议代码和gRPC代理代码。</p> <pre><code>go install google.golang.org/protobuf/cmd/protoc-gen-go go install google.golang.org/grpc/cmd/protoc-gen-go-grpc</code></pre> </h1> <p>proto文件是符合Protocol Buffers语言规范的数据交换协议文件，就像以前WebService定义服务时使用的XML文件。现在一般都是用proto3了，这里创建一个名为<em>hello.proto</em> 的文件，放到项目的proto目录下：</p> <pre><code>syntax = "proto3";  option go_package="/proto";  package Business;  service Hello {   rpc Say (SayRequest) returns (SayResponse); }  message SayResponse {   string Message = 1; }  message SayRequest {   string Name = 1; }</code></pre> <p>这个协议很简单，有个名字为Hello的服务，提供一个名字为Say的rpc方法，这个方法有输入输出，输入信息中有一个名为Name的参数，输出信息中有一个名为Message的返回值。</p> </h1> <p>在项目根目录中执行如下命令，会在proto目录下生成两个文件：hello.pb.go 和 hello_grpc.pb.go。</p> <pre><code>protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative proto/hello.proto</code></pre> <p>hello.pb.go 中是输入输出数据类型的Golang定义，hello_grpc.pb.go 中是客户端和服务端的gRPC代理类型和方法的Golang定义。</p> <p>也可以将文件生成到别的目录中，比如修改<em>proto</em> 文件中<em>go_package</em> 的配置为：</p> <pre><code>option go_package="/business";</code></pre> <p>然后执行下面的命令，会生成到项目下的business目录中：</p> <pre><code>protoc --go_out=.  --go-grpc_out=. proto/hello.proto</code></pre> <p>具体这个命令还有哪些参数，可以执行<em>protoc -help</em> 去探索下，这里就不罗嗦了。</p> </h1> <p>这里先上代码：</p> <pre><code>package main  import ( 	"context" 	"fmt" 	"grpcdemo/proto" 	"net"  	"google.golang.org/grpc" )  type server struct { 	proto.UnimplementedHelloServer }  func (s *server) Say(ctx context.Context, req *proto.SayRequest) (*proto.SayResponse, error) { 	fmt.Println("request:", req.Name) 	return &amp;proto.SayResponse{Message: "Hello " + req.Name}, nil }  func main() { 	listen, err := net.Listen("tcp", ":8001") 	if err != nil { 		fmt.Printf("failed to listen: %v", err) 		return 	} 	s := grpc.NewServer() 	proto.RegisterHelloServer(s, &amp;server{}) 	//reflection.Register(s)  	defer func() { 		s.Stop() 		listen.Close() 	}()  	fmt.Println("Serving 8001...") 	err = s.Serve(listen) 	if err != nil { 		fmt.Printf("failed to serve: %v", err) 		return 	} }</code></pre> <p>整个过程如下：先定义一个名为 server 的类型，它去实现hello_grpc.pb.go中生成的HelloServer接口；然后通过grpc.NewServer创建一个gRPC服务器；然后将server类型的实例注册到这个gRPC服务器；最后让这个gRPC服务器在某个本地网络端口监听上开始接受客户端请求。</p> <p>代码中注释了一行：<em>reflection.Register(s)</em>  它是注册了一个特殊的service，能让外部获得server中已注册的服务和方法。这对于开发时可能比较有用，具体细节可以看这里：https://github.com/grpc/grpc-go/blob/master/Documentation/server-reflection-tutorial.md</p> <p>如果直接粘贴这段代码的话，会有很多包没有引用进来，可以通过<em>go get</em> 获取这些包，也可以执行命令：<em>go mod tidy</em> 来引入需要的包。</p> <p>这里边还import了一个<em>grpcdemo/proto</em> ，这个是我这边项目的mod是grpcdemo，gRPC代理程序的package是proto，如果你的不一样，需要修改下。</p> </h1> <p>访问gRPC服务也是通过hello_grpc.pb.go中生成的方法，直接上代码：</p> <pre><code class="language-go">package main  import ( 	"bufio" 	"context" 	"fmt" 	"grpchello/proto" 	"os"  	"google.golang.org/grpc" 	"google.golang.org/grpc/credentials/insecure" )  func main() {  	var serviceHost = "127.0.0.1:8001"  	conn, err := grpc.Dial(serviceHost, grpc.WithTransportCredentials(insecure.NewCredentials())) 	if err != nil { 		fmt.Println(err) 	} 	defer conn.Close()  	client := proto.NewHelloClient(conn) 	rsp, err := client.Say(context.TODO(), &amp;proto.SayRequest{ 		Name: "BOSIMA", 	})  	if err != nil { 		fmt.Println(err) 	}  	fmt.Println(rsp)  	fmt.Println("按回车键退出程序...") 	in := bufio.NewReader(os.Stdin) 	_, _, _ = in.ReadLine() }</code></pre> <p>上边服务端程序的监听端口指定的<em>8001</em>，所以这里先创建了一个到<em>127.0.0.1:8001</em> 的连接；然后使用这个连接创建指定服务的客户端<em>proto.NewHelloClient(conn)</em> ；然后使用这个客户端调用相应的方法。</p> <p>hello_grpc.pb.go 已经生成了创建客户端的函数以及调用方法的函数，开发人员直接调用就好了。</p> </h1> <p>可以使用<em>go run xxx.go</em> 来编译并运行程序。这里为了方便测试，先使用<em>go build</em> 将它们编译为exe，然后再双击运行。实际运行效果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/ac409a48effd07561dfe52e6952e6ec0.jpg" alt="Golang开发gRPC服务详解"></p> <hr/> <p>以上就是本文的主要内容了，protoc-gen-go  和 protoc-gen-go-grpc 这两个插件都是gPRC官方提供的，官方也提供了其它多种语言的代理生成插件，其它框架或者语言开发的gRPC程序，只要符合gRPC规范，就能实现相互之间的互相访问。</p> <p>完整代码示例已经上传到Github：https://github.com/bosima/go-demo/tree/main/grpc-hello</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-102221.htm">python 递归函数及递归次数受到限制的解决办法</a></p>
+                                        <p>下一个：<a href="/news/article-103041.htm">动物医院手术室设备介绍文案（动物医院手术室设计装修）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-75546.htm" title="动物疫苗注射方法有几种图片 动物疫苗注射方法有几种图片大全">动物疫苗注射方法有几种图片 动物疫苗注射方法有几种图片大全</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-free-high-speed-nodes.htm" title="3月2日→22.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">3月2日→22.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-86689.htm" title="JavaScript获取URL参数的方法分享_javascript技巧">JavaScript获取URL参数的方法分享_javascript技巧</a></li>
+                        <li class="py-2"><a href="/news/article-102222.htm" title="Golang开发gRPC服务详解">Golang开发gRPC服务详解</a></li>
+                        <li class="py-2"><a href="/news/article-71550.htm" title="宠物猫轻微抓伤（宠物猫轻微抓伤需要***吗）">宠物猫轻微抓伤（宠物猫轻微抓伤需要***吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-24-free-high-speed-nodes.htm" title="4月24日→22.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">4月24日→22.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-8-free-node-subscribe.htm" title="4月8日→18.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">4月8日→18.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-72860.htm" title="宠物猫疫苗多少钱一针?（宠物猫打疫苗多少钱一针_养猫注意事项）">宠物猫疫苗多少钱一针?（宠物猫打疫苗多少钱一针_养猫注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-76233.htm" title="母猫好听的名字可爱（母猫好听的名字 可爱）">母猫好听的名字可爱（母猫好听的名字 可爱）</a></li>
+                        <li class="py-2"><a href="/news/article-84543.htm" title="南平领养宠物网站（南平领养宠物网站官网）">南平领养宠物网站（南平领养宠物网站官网）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">70</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+        <footer>
+        <div class="container">
+            <div class="row py-3">
+                <p align="center">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <a href="/">Free Vmess机场节点分享官网</a> 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/freevmess/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/plugins.js"></script>
+    <script src="/assets/website/js/frontend/freevmess/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

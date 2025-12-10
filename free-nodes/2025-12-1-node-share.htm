@@ -304,14 +304,9 @@ A：在设置中找到“配置备份”功能，一键回退到上一个版本�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议插件如何应对封锁？</h5></div>
+    <div class="panel-heading"><h5>Clash 自动切换节点如何提高网页访问速度？</h5></div>
     <div class="panel-body">
-        协议插件可隐藏真实通信特征，将流量伪装成正常 HTTP 或 TLS 数据。结合混淆方式使用，可以有效降低被 DPI 检测或封锁的风险，提高节点稳定性和长期可用性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 如何结合节点测速实现自动分流？</h5></div>
-    <div class="panel-body">
-        Netch 可以结合节点延迟检测和策略组，将不同类型的流量分配到低延迟节点。提高网页、视频和游戏访问速度及稳定性，优化整体网络体验。<hr />    </div>
+        Clash 结合策略组和延迟检测功能，可自动选择延迟低、稳定性高的节点处理网页流量。提高访问速度和稳定性，减少加载时间和浏览卡顿，优化网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Quantumult X 的主要功能是什么？</h5></div>
@@ -319,29 +314,24 @@ A：在设置中找到“配置备份”功能，一键回退到上一个版本�
         Quantumult X 是一款功能极其强大的 iOS 网络代理应用，支持多种协议和脚本扩展。它可以通过规则分流、广告屏蔽、请求重写等方式优化网络体验。Quantumult X 常被技术用户用于高级自动化与自定义代理策略。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 节点如何正确配置证书？</h5></div>
-    <div class="panel-body">
-        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。建议使用受信任证书并确保证书链完整，可保证节点安全和长期可用性，同时提高伪装效果和抗封锁能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的域名规则如何实现分流？</h5></div>
     <div class="panel-body">
         Sing-box 支持按域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性并提高整体体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 运行在低配设备上卡顿，如何减轻资源占用？</h5></div>
+    <div class="panel-heading"><h5>Trojan 节点如何正确配置证书？</h5></div>
     <div class="panel-body">
-        减少 rule-provider 数量、关闭不必要的日志与统计、降低 DNS 轮询频率并禁用内置测速；若使用 TUN 模式，可改为代理模式减少内核负担。必要时升级到更高性能的设备或使用更轻量内核。<hr />    </div>
+        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。建议使用受信任证书并确保证书链完整，可保证节点安全和长期可用性，同时提高伪装效果和抗封锁能力。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 自动切换节点如何提高网页访问速度？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 的多出口策略有什么作用？</h5></div>
     <div class="panel-body">
-        Clash 结合策略组和延迟检测功能，可自动选择延迟低、稳定性高的节点处理网页流量。提高访问速度和稳定性，减少加载时间和浏览卡顿，优化网络体验。<hr />    </div>
+        多出口策略允许不同流量通过不同节点访问。例如视频流量通过高速节点，普通网页使用备用节点，实现资源优化与智能分流，提高网络使用体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 与 Clash 有什么关系？</h5></div>
+    <div class="panel-heading"><h5>SSR 的协议插件如何应对封锁？</h5></div>
     <div class="panel-body">
-        Surfboard 是一款基于 Clash 核心的 iOS 应用，专为苹果用户设计。它通过友好的界面实现分流管理、节点切换和延迟测试等功能。与 Clash 类似，Surfboard 也支持订阅更新和多种代理协议，兼容性非常好。<hr />    </div>
+        协议插件可隐藏真实通信特征，将流量伪装成正常 HTTP 或 TLS 数据。结合混淆方式使用，可以有效降低被 DPI 检测或封锁的风险，提高节点稳定性和长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 与 Nekobox 有什么不同？</h5></div>
@@ -349,9 +339,19 @@ A：在设置中找到“配置备份”功能，一键回退到上一个版本�
         Nekoray 是一款基于 Qt 的跨平台代理前端，而 Nekobox 更偏向移动端简化使用。两者均支持 V2Ray/VLESS/Trojan 协议，但 Nekobox 提供了更轻量的界面和更快的连接启动速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的多出口策略有什么作用？</h5></div>
+    <div class="panel-heading"><h5>Netch 如何结合节点测速实现自动分流？</h5></div>
     <div class="panel-body">
-        多出口策略允许不同流量通过不同节点访问。例如视频流量通过高速节点，普通网页使用备用节点，实现资源优化与智能分流，提高网络使用体验。    </div>
+        Netch 可以结合节点延迟检测和策略组，将不同类型的流量分配到低延迟节点。提高网页、视频和游戏访问速度及稳定性，优化整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 与 Clash 有什么关系？</h5></div>
+    <div class="panel-body">
+        Surfboard 是一款基于 Clash 核心的 iOS 应用，专为苹果用户设计。它通过友好的界面实现分流管理、节点切换和延迟测试等功能。与 Clash 类似，Surfboard 也支持订阅更新和多种代理协议，兼容性非常好。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 运行在低配设备上卡顿，如何减轻资源占用？</h5></div>
+    <div class="panel-body">
+        减少 rule-provider 数量、关闭不必要的日志与统计、降低 DNS 轮询频率并禁用内置测速；若使用 TUN 模式，可改为代理模式减少内核负担。必要时升级到更高性能的设备或使用更轻量内核。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -380,16 +380,16 @@ A：在设置中找到“配置备份”功能，一键回退到上一个版本�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-node-share-links.htm" title="10月14日→21.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享">10月14日→21.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-free-node-subscribe-links.htm" title="11月2日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月2日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-6-free-node-subscribe-links.htm" title="10月6日→20.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">10月6日→20.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-19-node-share-links.htm" title="11月19日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月19日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-27-free-subscribe-node.htm" title="11月27日→23M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月27日→23M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-23-free-node-subscribe.htm" title="10月23日→18.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享">10月23日→18.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-10-free-node-subscribe.htm" title="10月10日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">10月10日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-22-node-share.htm" title="11月22日→19.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月22日→19.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-3-free-high-speed-nodes.htm" title="11月3日→20.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月3日→20.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-18-free-subscribe-node.htm" title="10月18日→20.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">10月18日→20.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-19-node-share-links.htm" title="11月19日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月19日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-node-share-links.htm" title="11月8日→18.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月8日→18.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-3-free-subscribe-node.htm" title="12月3日→19.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月3日→19.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-subscribe-node.htm" title="11月13日→20.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月13日→20.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-1-node-share.htm" title="12月1日→21.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月1日→21.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-11-node-share.htm" title="11月11日→21M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月11日→21M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-9-free-subscribe-node.htm" title="11月9日→20.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月9日→20.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-29-free-node-subscribe.htm" title="11月29日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月29日→21.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-2-node-share.htm" title="12月2日→18.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月2日→18.8M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
                     </ul>
     </div>
 </div>
@@ -401,13 +401,10 @@ A：在设置中找到“配置备份”功能，一键回退到上一个版本�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">10</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>

@@ -226,6 +226,26 @@ sudo apt-get install build-essential git
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在封锁严格地区的作用？</h5></div>
+    <div class="panel-body">
+        AEAD 加密防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 是否需要证书？</h5></div>
+    <div class="panel-body">
+        是的，Trojan 必须使用有效的 TLS 证书才能运行。推荐使用 Let's Encrypt 免费证书。若证书过期或配置错误，客户端将无法建立加密连接，导致无法访问外部网络。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 的 TCP/UDP 分流适合哪些应用？</h5></div>
+    <div class="panel-body">
+        TCP 分流适合网页、下载和视频播放，UDP 分流适合游戏、语音和实时视频。Netch 可同时代理 TCP 和 UDP 流量，实现精准分流，保证不同应用的最佳性能。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 是什么？</h5></div>
+    <div class="panel-body">
+        Sing-box 是新一代多协议代理框架，支持 VMess、VLess、Trojan、Hysteria、ShadowTLS 等协议。它比传统 V2Ray 更轻量化、模块化，并针对移动端和 Linux 系统进行了性能优化，受到开发者和高级用户的欢迎。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 是什么？它主要有什么用途？</h5></div>
     <div class="panel-body">
         Clash 是一个跨平台的代理客户端，支持多种代理协议，如 Vmess、Vless、Trojan 和 Shadowsocks 等。它主要用于分流管理、网络代理和科学上网，用户可以通过配置文件灵活控制网络流量，实现不同网站或应用走不同代理。<hr />    </div>
@@ -236,34 +256,9 @@ sudo apt-get install build-essential git
         Sing-box 可按端口设置流量分流规则，将游戏流量分配到低延迟节点。结合策略组使用，可保证游戏连接稳定，减少延迟和掉线，提高流畅度和网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在封锁严格地区的作用？</h5></div>
-    <div class="panel-body">
-        AEAD 加密防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是什么？</h5></div>
-    <div class="panel-body">
-        Sing-box 是新一代多协议代理框架，支持 VMess、VLess、Trojan、Hysteria、ShadowTLS 等协议。它比传统 V2Ray 更轻量化、模块化，并针对移动端和 Linux 系统进行了性能优化，受到开发者和高级用户的欢迎。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 是什么协议？</h5></div>
-    <div class="panel-body">
-        Vmess 是 V2Ray 的核心传输协议之一，提供高效的加密通信。它在客户端与服务器之间建立安全通道，支持多种传输方式，如 TCP、WebSocket 和 gRPC 等。由于其加密特性，Vmess 常用于绕过网络限制与防火墙检测。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 支持游戏加速吗？</h5></div>
-    <div class="panel-body">
-        Netch 专为游戏加速设计，支持 UDP 转发和 TAP 驱动，可有效降低延迟。用户可以为特定游戏添加路由规则，实现分流加速，从而提升国际游戏体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 WebSocket 传输与 TCP 有何区别？</h5></div>
     <div class="panel-body">
         WebSocket 通过 HTTP 封装 TCP 流量，适合伪装成正常网页请求，增加隐蔽性。相比原生 TCP，可更好地绕过封锁和 DPI 检测，但略增加协议开销。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 是否需要证书？</h5></div>
-    <div class="panel-body">
-        是的，Trojan 必须使用有效的 TLS 证书才能运行。推荐使用 Let's Encrypt 免费证书。若证书过期或配置错误，客户端将无法建立加密连接，导致无法访问外部网络。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + Reality 与 Trojan 在性能上差异大吗？</h5></div>
@@ -271,9 +266,14 @@ sudo apt-get install build-essential git
         两者性能相近。VLESS + Reality 伪装更自然，适合强封锁地区；Trojan 则依托标准 TLS 实现高速连接。选择取决于服务器支持与环境稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 的 TCP/UDP 分流适合哪些应用？</h5></div>
+    <div class="panel-heading"><h5>Netch 支持游戏加速吗？</h5></div>
     <div class="panel-body">
-        TCP 分流适合网页、下载和视频播放，UDP 分流适合游戏、语音和实时视频。Netch 可同时代理 TCP 和 UDP 流量，实现精准分流，保证不同应用的最佳性能。    </div>
+        Netch 专为游戏加速设计，支持 UDP 转发和 TAP 驱动，可有效降低延迟。用户可以为特定游戏添加路由规则，实现分流加速，从而提升国际游戏体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Vmess 是什么协议？</h5></div>
+    <div class="panel-body">
+        Vmess 是 V2Ray 的核心传输协议之一，提供高效的加密通信。它在客户端与服务器之间建立安全通道，支持多种传输方式，如 TCP、WebSocket 和 gRPC 等。由于其加密特性，Vmess 常用于绕过网络限制与防火墙检测。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -302,16 +302,16 @@ sudo apt-get install build-essential git
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-12-11-free-node-subscribe.htm" title="12月11日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月11日→18.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-16-node-share.htm" title="12月16日→20.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月16日→20.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-28-free-subscribe-node.htm" title="11月28日→20.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月28日→20.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-18-free-node-subscribe.htm" title="12月18日→21.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月18日→21.1M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-24-free-node-subscribe-links.htm" title="12月24日→20.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月24日→20.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-17-node-share-links.htm" title="11月17日→21.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月17日→21.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-subscribe-node.htm" title="11月13日→20.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月13日→20.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-6-node-share-links.htm" title="11月6日→20.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月6日→20.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-12-free-node-subscribe.htm" title="11月12日→18.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月12日→18.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-3-free-subscribe-node.htm" title="12月3日→19.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月3日→19.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe-links.htm" title="11月14日→19.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享">11月14日→19.6M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-31-node-share.htm" title="12月31日→20.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月31日→20.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-17-node-share.htm" title="12月17日→18.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月17日→18.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-21-node-share-links.htm" title="12月21日→18.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月21日→18.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-10-free-subscribe-node.htm" title="12月10日→18.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月10日→18.7M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-22-free-node-subscribe-links.htm" title="12月22日→19.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月22日→19.3M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-27-node-share.htm" title="12月27日→22.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月27日→22.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-25-free-high-speed-nodes.htm" title="12月25日→20.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享">12月25日→20.4M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-7-free-node-subscribe.htm" title="1月7日→21.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享">1月7日→21.5M/S|2025年最新免费节点Free Vmess订阅链接地址分享</a></li>
                     </ul>
     </div>
 </div>
@@ -323,10 +323,10 @@ sudo apt-get install build-essential git
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                     </ul>
     </div>

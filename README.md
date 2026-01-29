@@ -1,4 +1,4 @@
-# 1月22日→22.2M/S|2025年最新免费节点Free Vmess订阅链接地址分享  更新时间 2026-01-22 10:32:35
+# 1月29日→19.9M/S|2025年最新免费节点Free Vmess订阅链接地址分享  更新时间 2026-01-29 09:42:10
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freevmess.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://freevmess.github.io/uploads/2026/01/0-20260122.yaml
-- https://freevmess.github.io/uploads/2026/01/1-20260122.yaml
-- https://freevmess.github.io/uploads/2026/01/2-20260122.yaml
-- https://freevmess.github.io/uploads/2026/01/3-20260122.yaml
-- https://freevmess.github.io/uploads/2026/01/4-20260122.yaml
+- https://freevmess.github.io/uploads/2026/01/0-20260129.yaml
+- https://freevmess.github.io/uploads/2026/01/1-20260129.yaml
+- https://freevmess.github.io/uploads/2026/01/2-20260129.yaml
+- https://freevmess.github.io/uploads/2026/01/3-20260129.yaml
+- https://freevmess.github.io/uploads/2026/01/4-20260129.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://freevmess.github.io/uploads/2026/01/0-20260122.txt
-- https://freevmess.github.io/uploads/2026/01/1-20260122.txt
-- https://freevmess.github.io/uploads/2026/01/2-20260122.txt
-- https://freevmess.github.io/uploads/2026/01/3-20260122.txt
-- https://freevmess.github.io/uploads/2026/01/4-20260122.txt
+- https://freevmess.github.io/uploads/2026/01/0-20260129.txt
+- https://freevmess.github.io/uploads/2026/01/1-20260129.txt
+- https://freevmess.github.io/uploads/2026/01/2-20260129.txt
+- https://freevmess.github.io/uploads/2026/01/3-20260129.txt
+- https://freevmess.github.io/uploads/2026/01/4-20260129.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://freevmess.github.io/uploads/2026/01/20260122.json
+- https://freevmess.github.io/uploads/2026/01/20260129.json
 
 ## 更多Clash节点订阅 ：
 
